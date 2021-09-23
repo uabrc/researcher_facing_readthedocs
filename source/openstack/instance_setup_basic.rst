@@ -15,11 +15,11 @@ and released when no longer needed.
 
 1. Click "Network" in the left-hand navigation pane to open the fold-out menu.
 
-   .. figure:: ../img/networks_000.png
+   .. figure:: ./images/networks_000.png
 
 2. Click "Floating IPs".
 
-   .. figure:: ../img/floating_ips_001.png
+   .. figure:: ./images/floating_ips_001.png
 
 3. Click "Allocate IP to Project" to open a dialog box.
 4. Fill out the dialog box.
@@ -29,14 +29,14 @@ and released when no longer needed.
    c. Leave "DNS Domain" empty.
    d. Leave "DNS Name" empty.
 
-   .. figure:: ../img/floating_ips_002.png
+   .. figure:: ./images/floating_ips_002.png
 
 5. Click "Allocate IP".
 
    a. Redirects to the "Floating IPs" page.
    b. There should be a new entry in the table.
 
-   .. figure:: ../img/floating_ips_003.png
+   .. figure:: ./images/floating_ips_003.png
 
 Creating a Key Pair
 -------------------
@@ -57,11 +57,11 @@ compromised by an attacker.
 
 1. Click "Compute" in the left-hand navigation pane to open the fold-out menu.
 
-   .. figure:: ../img/key_pairs_000.png
+   .. figure:: ./images/key_pairs_000.png
 
 2. Click "Key Pairs".
 
-   .. figure:: ../img/key_pairs_001.png
+   .. figure:: ./images/key_pairs_001.png
 
 3. Click "+ Create Key Pair" to open a dialog box.
 4. Fill out the dialog box.
@@ -69,7 +69,7 @@ compromised by an attacker.
    a. Enter a "Key Pair Name".
    b. Select "SSH Key" in the "Key Type" drop down box.
 
-   .. figure:: ../img/key_pairs_002.png
+   .. figure:: ./images/key_pairs_002.png
 
 5. Click "+ Create Key Pair"
 
@@ -77,12 +77,12 @@ compromised by an attacker.
    b. Download the :code:`pem` file. For security reasons this will be your only chance to ever obtain the private key from OpenStack.
    c. Failing to download the :code:`pem` file now means a new key pair will need to be created.
 
-   .. figure:: ../img/key_pairs_003.png
+   .. figure:: ./images/key_pairs_003.png
 
    d. Redirects to the "Key Pairs" page.
    e. There should be a new entry in the table.
 
-   .. figure:: ../img/key_pairs_004.png
+   .. figure:: ./images/key_pairs_004.png
 
 6. To use the private key on your local machine.
 
@@ -91,12 +91,12 @@ compromised by an attacker.
    c. :code:`ssh-add <pem_file>` to add the private key to the ssh keyring for use by ssh.
    d. :code:`ssh-add -d <pem_file>` to remove the key.
 
-   .. figure:: ../img/key_pairs_005.png
+   .. figure:: ./images/key_pairs_005.png
 
 It is alternately possible to use a custom key pair created on your local
 machine. We assume you know how to create a key pair on your local machine and
 have already done so. To upload a key pair, replace steps 3 and 4 above with the
-following, perform step 5, and skip step 6.
+following, perform step 5 from above, and skip step 6.
 
 3. Click "Import Public Key" to open a dialog box.
 4. Fill out the dialog box.
@@ -105,7 +105,7 @@ following, perform step 5, and skip step 6.
    b. Select "SSH Key" in the "Key Type" drop-down box.
    c. Click "Browse..." to upload a public key file from your custom key pair **OR** copy-paste the content of that key file into the "Public Key" box.
 
-   .. figure:: ../img/key_pairs_alt_002.png
+   .. figure:: ./images/key_pairs_alt_002.png
 
 Creating an Instance
 --------------------
@@ -122,15 +122,15 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
 
 1. Click "Compute" in the left-hand navigation pane to open the fold-out menu.
 
-   .. figure:: ../img/key_pairs_000.png
+   .. figure:: ./images/key_pairs_000.png
 
 2. Click "Instances".
 
-   .. figure:: ../img/instances_001.png
+   .. figure:: ./images/instances_001.png
 
 3. Click "Launch Instance" to open a dialog box.
 
-   .. figure:: ../img/instances_002.png
+   .. figure:: ./images/instances_002.png
 
 4. Fill out the dialog box.
 5. "Details" tab.
@@ -141,7 +141,7 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
    d. Select "1" in the "Count" field.
    e. Click "Next >" to move to the "Source" tab.
 
-   .. figure:: ../img/instances_003.png
+   .. figure:: ./images/instances_003.png
 
 6. "Source" tab. Sources determine what operating system or pre-defined image will be used as the starting point for your operating system (OS).
 
@@ -162,7 +162,7 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
 
    f. Click "Next >" to move to the "Flavor" tab.
 
-   .. figure:: ../img/instances_004.png
+   .. figure:: ./images/instances_004.png
 
 7. "Flavor" tab. Flavors determine what hardware will be available to your instance, including cpus, memory and gpus.
 
@@ -174,7 +174,7 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
 
    b. Click "Next >" to move to the "Networks" tab.
 
-   .. figure:: ../img/instances_005.png
+   .. figure:: ./images/instances_005.png
 
 8. "Networks" tab. Networks determine how your instance will talk to the internet and other instances. See :doc:`networking<network_setup_basic>` for more information.
 
@@ -187,14 +187,14 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
 
    b. Click "Next >" to move to the "Network Ports" tab.
 
-   .. figure:: ../img/instances_006.png
+   .. figure:: ./images/instances_006.png
 
 9.  "Network Ports" tab. *Coming Soon!*
 
    a. Leave this tab empty.
    b. Click "Next >" to move to the "Security Groups" tab.
 
-   .. figure:: ../img/instances_007.png
+   .. figure:: ./images/instances_007.png
 
 10. "Security Groups tab. Security Groups allow for fine-grained control over external access to your instance. For more information see :doc:`Creating a Security Group<networking_setup_basics>` for more information.
 
@@ -202,7 +202,7 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
     b. The "default" Security Group should already be in the "Allocated" section.
     c. Click "Next >" to move to the "Key Pair" tab.
 
-    .. figure:: ../img/instances_008.png
+    .. figure:: ./images/instances_008.png
 
 11. "Key Pair" tab. Key Pairs allow individual access rights to the instance via SSH. For more information see :ref:`Creating a Key Pair`.
 
@@ -214,7 +214,7 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
 
     b. Click "Next >" to move to the "Configuration" tab.
 
-   .. figure:: ../img/instances_009.png
+   .. figure:: ./images/instances_009.png
 
 12. "Configuration" tab. *Coming Soon!*
 
@@ -241,9 +241,9 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
     b. There should be a new entry in the table.
     c. The instance will take some time to build and boot. When the Status column entry says "Active" please move to the next steps.
 
-   .. figure:: ../img/instances_014.png
+   .. figure:: ./images/instances_014.png
 
-   .. figure:: ../img/instances_015.png
+   .. figure:: ./images/instances_015.png
 
 17. Associate Floating IP.
 
@@ -255,7 +255,8 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
 
 18. At this stage you should be able to SSH into your instance from on campus or on the UAB VPN. To do so be sure your local machine has ssh and then use :code:`ssh ubuntu@<floating ip> -i ~/.ssh/*.pem`. If you are using a different operating system, such as CentOS, replace the user :code:`ubuntu` with :code:`centos`.
 
-   .. figure:: ../img/instances_017.png
+   .. figure:: ./images/instances_017.png
+
 
 19. Attach a Volume. This step assumes a persistent volume has already been created. More information can be found in :doc:`Creating a Volume<volume_setup_basic`.
 
