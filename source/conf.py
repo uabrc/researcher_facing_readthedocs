@@ -1,3 +1,32 @@
+from pathlib import Path, PurePath
+from typing import List, Union
+
+PathLike = Union[Path, PurePath, str]
+
+
+def build_inline_code_highlighting_roles() -> str:
+    FOLDER = PurePath("../res/")
+    with open(file=FOLDER / "inline_languages.txt", mode="r") as f:
+        lexers = f.readlines()
+
+    roles: List[str] = []
+    for lexer in lexers:
+        lexer = lexer.strip().lower()
+        role_parts: List[str] = [
+            f".. role:: {lexer}(code)",
+            f":language: {lexer}",
+            ":class: highlight",
+        ]
+        role: str = "\n   ".join(role_parts)
+        roles.append(role)
+
+    out: str = "\n\n".join(roles)
+    # with open(file=FOLDER / "inline_lanugage_roles.txt", mode="w") as f:
+    #     f.write(out)
+
+    return out
+
+
 # Configuration file for the Sphinx documentation builder.
 #
 # This file only contains a selection of the most common options. For a full
@@ -50,4 +79,8 @@ html_theme = 'alabaster'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+
+# Prolog:
+rst_prolog = f"""
+{build_inline_code_highlighting_roles()}
+"""
