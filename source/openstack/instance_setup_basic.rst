@@ -257,11 +257,13 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
 
    .. figure:: ./images/instances_017.png
 
+SSH Into the Instance
+---------------------
 
-19. Attach a Volume. This step assumes a persistent volume has already been created. More information can be found in :doc:`Creating a Volume<volume_setup_basic`.
+If you are following the steps from top to bottom, then at this stage you should be able to SSH into your instance from on campus or on the UAB VPN. To do so be sure your local machine has ssh and then use the following command If you are using a different operating system, such as CentOS, replace the user :code:`ubuntu` with :code:`centos` or whatever is appropriate.
 
-    a. In the "Actions" column entry, click the drop down triangle button and select "Attach Volume".
-    b. A dialog box will open.
-    c. Select a volume in the "Volume ID" drop down box.
-    d. Click "Attach Volume".
-    e. **IMPORTANT** For more information on making the volume usable in the operating system, please see :doc:`Mounting Persistent Volumes<volume_setup_basic>`.
+   .. code-block:: bash
+
+      ssh ubuntu@<floating ip> -i ~/.ssh/<keypair_name>.pem
+
+   .. figure:: ./images/instances_020.png
