@@ -76,7 +76,7 @@ compromised by an attacker.
    b. Select "SSH Key" in the "Key Type" drop down box.
 
    .. figure:: ./images/key_pairs_002.png
-      :alt: Image showing the Create Key pair dialog. The dialog form is filled out.
+      :alt: Image showing the Create Key pair dialog. The dialog form is filled out. The Key Pair Name is set to my_key_pair.
 
 5. Click "+ Create Key Pair"
 
@@ -91,7 +91,7 @@ compromised by an attacker.
    e. There should be a new entry in the table.
 
    .. figure:: ./images/key_pairs_004.png
-      :alt: Image showing the Key Pairs page. The Key Pairs table has one entry.
+      :alt: Image showing the Key Pairs page. The Key Pairs table has one entry labeled my_key_pair.
 
 6. To use the private key on your local machine.
 
@@ -146,7 +146,7 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
 4. Fill out the dialog box completely. There are several tabs that will need to be completed.
 
    .. figure:: ./images/instances_002.png
-      :alt: Image showing the Launch Instance dialog. The dialog form has multiple tabs on the left menu. The Details tab is selected. The Details dialog form is empty.
+      :alt: Image showing the Launch Instance dialog. The dialog form has multiple tabs on the left menu. The Details tab is selected. The Details dialog form is empty except the Instance Name is set to my_instance.
 
 5. "Details" tab.
 

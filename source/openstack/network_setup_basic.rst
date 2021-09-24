@@ -30,7 +30,7 @@ Creating a Network
    d. Leave the "Availability Zone Hints" box empty.
 
    .. figure:: ./images/networks_003.png
-      :alt: Image showing Create Network dialog. The dialog form is empty.
+      :alt: Image showing Create Network dialog. The dialog form is empty except Network Name has been set to my_network.
 
 5. Click "Create".
 
@@ -55,12 +55,12 @@ Creating a Subnet
    c. At least one other entry must be in the table. See :ref:`Creating a Network`.
 
    .. figure:: ./images/networks_004.png
-      :alt: Image showing the OpenStack Networks page. There are two entries in the table. One is the default, persistent uab-campus network. The other is my_network created previously.
+      :alt: Image showing the OpenStack Networks page. There are two entries in the table. One is the default, persistent uab-campus network. The other is my_network.
 
 3. Under the "Actions" column, select the drop-down triangle button in the row corresponding to the network you want to add a subnet to.
 
    .. figure:: ./images/subnet_002.png
-      :alt: Image Showing the drop-down box under the Actions column in the my-network row of the Networks table. The drop-down box has been clicked, revealing two options. One of the options is Create Subnet.
+      :alt: Image Showing the drop-down box under the Actions column in the my-network row of the Networks table. The drop-down box has been clicked, revealing two options. The selected option is Create Subnet.
 
 4. Click "Create Subnet" in the drop-down to open a dialog box.
 5. Fill out the dialog box.
@@ -75,7 +75,7 @@ Creating a Subnet
       vi. Click the "Next >>" button to move to the "Subnet Details" tab.
 
       .. figure:: ./images/subnet_003.png
-         :alt: Image Showing the Create Subnet dialog box. The Subnet tab is selected. The form has not been filled out beyond default values.
+         :alt: Image Showing the Create Subnet dialog box. The Subnet tab is selected. The form has not been filled out beyond default values. The Subnet Name has been set to my_subnet.
 
    b. The "Subnet Details" tab.
 
