@@ -9,10 +9,12 @@ Creating a Volume
 1. Click the "Volumes" fold-out in the left-hand navigation pane - the fold-out should open.
 
    .. figure:: ./images/volumes_000.png
+      :alt: Image showing the OpenStack Overview page. The Volumes fold-out is opened. The Volumes link in the fold-out is highlighted.
 
 2. Click "Volumes" within the fold-out to open the "Volumes" table page.
 
    .. figure:: ./images/volumes_001.png
+      :alt: Image showing the Volumes page. The Volumes table is empty.
 
 3. Click "+ Create Volume" to open a dialog box.
 
@@ -27,6 +29,7 @@ Creating a Volume
    g. Select "No group" in the "Group" drop down box.
 
    .. figure:: ./images/volumes_002.png
+      :alt: Image showing the Create Volume dialog. The dialog is filled out. The volume name is set to my_volume.
 
 5. Click "Create Volume"
 
@@ -34,6 +37,7 @@ Creating a Volume
    b. There will be a new entry in the "Volumes" table.
 
    .. figure:: ./images/volumes_003.png
+      :alt: Image showing the Volumes page. The table has one entry labeled my_volume.
 
 
 Attaching a Volume to a Running Instance
@@ -46,12 +50,14 @@ To attach a volume you must have already created at least one using the OpenStac
 2. In the "Actions" column entry, click the drop down triangle button and select "Attach Volume".
 
    .. figure:: ./images/instances_018.png
+      :alt: Image showing the OpenStack Instances Page. The table has one entry labeled my_instance. The drop-down box under the Actions column is open revealing many options. The Attach Volume option is highlighted.
 
 3. A dialog box will open.
 
 4. Select a volume in the "Volume ID" drop down box.
 
    .. figure:: ./images/instances_019.png
+      :alt: Image showing the Attach Volume dialog box. The Volume ID is set to my_volume.
 
 5. Click "Attach Volume".
 
@@ -68,12 +74,14 @@ To format a volume, you must have created a volume and attached it to an instanc
 2. Scroll down to "Volumes Attached" and make note of the :code:`<mount>` part of :code:`<volume-name> on <mount>` for your attached volume as it will be used in later steps.
 
    .. figure:: ./images/persistent_volumes_000.png
+      :alt: Image showing the my_instance overview page. The page has been scrolled to the bottom. The mouse is pointing to a label under the Volumes Attached heading. The mouse is pointing to the Attached To label reading my_volume on /dev/vdb.
 
 3. SSH into the instance from your local machine or from Cheaha.
 
 4. Verify the volume is attached by using :bash:`sudo fdisk -l | egrep "<mount>""`
 
    .. figure:: ./images/persistent_volumes_001.png
+      :alt: Image showing the MINGW64 terminal on Windows. The last three lines show the sudo fdisk -l command entered. The result includes the disk label /dev/vdb.
 
 5. Format the volume using :bash:`sudo fdisk "<mount>"`
 
@@ -89,10 +97,12 @@ To format a volume, you must have created a volume and attached it to an instanc
    j. Enter :code:`w` to execute the setup prepared in the previous substeps.
 
    .. figure:: ./images/persistent_volumes_002.png
+      :alt: Image showing the MINGW64 terminal. The sudo fdisk /dev/vdb command has been entered. Also shown are the various prompts guiding through the process of formatting the disk. The final command was the literal character w, which executed the previously entered commands.
 
 6. Verify the volume is not mounted using :bash:`sudo mount | egrep "<mount>"`. If there is no output, then move to the next step. If there is some output then use :bash:`sudo umount -l "<mount>"` to unmount the volume and verify again.
 
    .. figure:: ./images/persistent_volumes_003.png
+      :alt: Image showing the MINGW64 terminal. The volume has been verified to be not mounted using the sudo mount | egrep /dev/vdb command.
 
 7. Create the filesystem using :bash:`sudo mkfs.ext4 "<pmount>"`. Ensure that the output looks like the following:
 
@@ -113,6 +123,7 @@ To format a volume, you must have created a volume and attached it to an instanc
       Writing superblocks and filesystem accounting information: done
 
    .. figure:: ./images/persistent_volumes_004.png
+      :alt: Image showing the MINGW64 terminal. The sudo mkfs.ext4 /dev/vdb1 command has been used to create a partition labeled /dev/vdb1 on mount /dev/vdb.
 
 The volume is now formatted and ready for mounting within an attached instance OS. You will need to make note of :code:`<pmount>` for when you are ready to mount the volume to an instance.
 
@@ -127,6 +138,7 @@ Mounting a volume needs to be done once per instance it will be attached to. It 
 2. Obtain the uuid of the volume using :bash:`sudo blkid | egrep "<pmount>"`. This will be referred to as :code:`<uuid>` in future steps.
 
    .. figure:: ./images/persistent_volumes_005.png
+      :alt: Image showing the MINGW64 terminal on Windows. The sudo blkid | egrep "vdb1" command has been used to find the partition UUID.
 
 3. Create a directory to mount the volume as. A good choice is :bash:`sudo mkdir /mnt/<volume-name>` where :code:`<volume-name>` is something meaningful for you or your project. This directory will be referred to as :code:`<directory>` in future steps.
 
@@ -135,6 +147,7 @@ Mounting a volume needs to be done once per instance it will be attached to. It 
 5. Verify the volume is mounted using :bash:`df -h | egrep <pmount>`
 
    .. figure:: ./images/persistent_volumes_006.png
+      :alt: Image showing the MINGW64 terminal. The command mkdir /mnt/my-volume has been used to create a mount point. The command sudo mount -U <UUID> /mnt/my-volume has been used to mount the volume to the mount point. The command df -h | egrep "vdb1" has been used to verify mounting.
 
 6. Edit the :code:`fstab` file to make mounting persistent across instance reboots.
 
@@ -146,19 +159,22 @@ Mounting a volume needs to be done once per instance it will be attached to. It 
       /dev/disk/by-uuid/<uuid> <directory> auto defaults,nofail 0 3
 
    .. figure:: ./images/persistent_volumes_007.png
+      :alt: Image showing the MINGW64 terminal. The nano editor is open and the file /etc/fstab is being edited with sudo privileges to allow saving. The suggested line has been added to the file.
 
 7. Verify `fstab` was modified correctly by soft rebooting the instance and verifying the mount again using :shell:`df -h | egrep "<pmount>"`.
 
    .. figure:: ./images/persistent_volumes_008.png
+      :alt: Image showing the MINGW64 terminal. The instance has been rebooted prior to this. The command df -h | egrep "vdb1" has been used to verify the partition was mounted on restart.
 
 8. Set access control using the following commands:
 
    .. code-block:: bash
 
-      sudo apt install acl (or yum install, etc., if not already installed)
+      sudo apt install acl # or yum install, etc., if not already installed
       sudo setfacl -R -m u:<username>:rwx <directory>
 
    .. figure:: ./images/persistent_volumes_009.png
+      :alt: Image showing the MINGW64 terminal. The acl package has been installed using the command sudo apt install acl. The access controls have been set on the mount point /mnt/my-volume using the sudo setfacl command.
 
 9. Verify the access controls were modified correctly by creating a test file and then listing files in :code:`<directory>` to ensure the file was created. The following commands will achieve this:
 
@@ -169,5 +185,6 @@ Mounting a volume needs to be done once per instance it will be attached to. It 
       ls
 
    .. figure:: ./images/persistent_volumes_010.png
+      :alt: Image showing the MINGW64 terminal. Access control settings have been verified by creating an empty file in the mount point /mnt/my-volume and listing files.
 
 The volume is now mounted to your instance and ready for use and re-use across sessions and reboots.
