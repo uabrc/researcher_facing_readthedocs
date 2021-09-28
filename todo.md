@@ -68,6 +68,12 @@
     - UABGrid docs
 - Slurm/MATLAB integration (https://www.mathworks.com/help/matlab-parallel-server/configure-for-slurm-pbs-pro-lsf-torque.html)
 
+
+# Non-Docs
+
+- Auto-scan external links when updating to a new build to look for broken links
+
+
 # Questions
 
 - how much standalone VNC info to include? None to get people to use OOD instead?
