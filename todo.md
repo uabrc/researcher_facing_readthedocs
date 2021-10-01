@@ -1,8 +1,12 @@
 # High Priority
 
 - Welcome/Quick Start
-    - finish User registration (UAB users) - Matt
-    - Using Open OnDemand and its features - Matt
+    - finish User registration (UAB users) - Matt (done)
+    - Using Open OnDemand and its features - Matt (done)
+        - link to Globus section in file-browser/Uploading data when it's
+          written
+        - add link to Python virtual environments at bottom of
+          ood_interactive/Jupyter when it's written
     - Using the module system
     - Using SLURM (and yeah queues and how they work)
         - Turn
