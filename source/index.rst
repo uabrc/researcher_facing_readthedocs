@@ -14,10 +14,10 @@ resources are freely available to use by any researcher or instructor at UAB.
 
 
 
- .. MKD: currently thinking we place and edit all TOC in index, but hide them
-    from rendering on the actual page. They'll appear on the sidebar. Then we
-    keep things on the mainpage to a minimum, like the CGDS docs, Only including
-    quickstart information. Modelled after https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html
+.. MKD: currently thinking we place and edit all TOC in index, but hide them
+   from rendering on the actual page. They'll appear on the sidebar. Then we
+   keep things on the mainpage to a minimum, like the CGDS docs, Only including
+   quickstart information. Modelled after https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html
 
 Cheaha Quickstart
 -----------------
