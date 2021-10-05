@@ -58,21 +58,21 @@ Change Password and Recover From Lost Password
 
 To change your password, or recover your account in case of a lost password, please click the "Change XIAS Password" link in the left hand panel of the main page. Once there, follow the instructions on the form.
 
-   .. figure:: ./images/xias_guest_change_password.png
-      :alt: Image showing the change XIAS password form.
+.. figure:: ./images/xias_guest_change_password.png
+   :alt: Image showing the change XIAS password form.
 
 Resend Invite Code
 ------------------
 
 If your invite code has expired, you can have a new invite code sent to you by clicking the "Resend Invite Code" link in the left hand panel of the main page. Once there, follow the instructions on the form.
 
-   .. figure:: ./images/xias_guest_resend.png
-      :alt: Image showing the resend invite code form.
+.. figure:: ./images/xias_guest_resend.png
+   :alt: Image showing the resend invite code form.
 
 Guest IT Info
 -------------
 
 For more information on UAB IT policies and other useful and helpful information, please click the "UABIT Guest User info" link.
 
-   .. figure:: ./images/xias_guest_it_info.png
-      :alt: Image showing the UABIT XIAS Guest Info page.
+.. figure:: ./images/xias_guest_it_info.png
+   :alt: Image showing the UABIT XIAS Guest Info page.
