@@ -1,0 +1,195 @@
+Submitting Jobs with Slurm
+==========================
+
+Slurm is simple to use to submit batch jobs. Scripts should be written in an
+available shell language on Cheaha, typically bash, and should include the
+appropriate Slurm directives at the top of the script telling the scheduler the
+requested resources. Common Slurm directives can be seen below along with simple
+examples for both single batch jobs and array batch jobs
+
+Basic Slurm Directives
+----------------------
+
+Slurm has many directives a researcher can use when creating a job, but a short
+list of the very common ones are listed here:
+
+1. ``--job-name``: The name of the job that appears when using ``squeue``
+2. ``--ntasks``: The number of nodes a job needs
+3. ``--cpus-per-node``: The number of cores to request on each node
+4. ``--partition``: The partition to submit the job to. Partition details can be
+   seen below
+5. ``--time``: Amount of time the job is estimated to run for. Acceptable time
+   formats include "minutes", "minutes:seconds", "hours:minutes:seconds",
+   "days-hours", "days-hours:minutes" and "days-hours:minutes:seconds"
+6. ``--mem-per-cpu``: Amount of RAM (in MB) needed per CPU. Can specify 4 GB
+   with either 4000 or 4G. ``--mem`` can be used to specify the total RAM across
+   all CPUs instead. Requested memory is shared across all CPUs.
+7. ``--output``: Path to a file storing the text output of the job commands.
+8. ``--error``: Path to an output file if the script errors.
+
+For batch jobs, directives are typically included as comments at the top of the
+script. See examples below. All batch jobs should be submitted using the
+``sbatch`` command. All directives and more information on how to submit jobs
+can be seen using ``man sbatch``.
+
+Slurm Partitions
+----------------
+
+.. csv-table:: Available Slurm Partitions
+   :file: /slurm/partitions.csv
+   :widths: 25 25 25 25
+   :header-rows: 1
+
+Notes:
+
+- Express jobs are highest priority in scheduling meaning they will be scheduled
+  faster
+- Most partitions have a max amount of requestable memory per node at 256 GB.
+  Largemem has a maximum memory limit of 1.5 TB.
+- Pascalnodes are specifically used for access to GPUs
+- Each user has a maximum amount of requestable resources across all jobs.
+  Submitted jobs beyond this resource limit will be kept in the queue until
+  a user's prior jobs have completed.
+
+
+Single Batch Job
+----------------
+
+An example script using some of the listed directives can be seen below:
+
+.. code-block:: bash
+
+    #!/bin/bash
+    #
+    #SBATCH --job-name=test
+    #SBATCH --ntasks=1
+    #SBATCH --cpus-per-node=1
+    #SBATCH --partition=express
+    #SBATCH --time=10:00
+    #SBATCH --mem-per-cpu=1G
+    #SBATCH --output=$HOME/test.out
+
+    echo "Hello World"
+
+This script requests 1 core on 1 node with 1 GB of RAM on the express partition
+for 10 minutes. The output of the commands in the script, the ``echo`` command
+here, can be seen in the ``$HOME/test.out`` file that will be created when the
+script executes.
+
+If the script is saved as ``$HOME/example.sh``, it can be submitted using the
+following command from the command line:
+
+.. code-block:: bash
+
+    sbatch $HOME/example.sh
+
+
+Array Jobs
+----------
+
+For some analyses, you will want to perform the same operations on different
+inputs. However, instead of creating individual scripts for each different
+input, you can create an array job instead.
+
+Array jobs can use a Slurm environmental variable, ``$SLURM_ARRAY_TASK_ID``, as an
+index for inputs. For example, if we have a script that looks like:
+
+.. code-block:: bash
+
+   #!/bin/bash
+   #
+   #SBATCH --job-name=array
+   #SBATCH --output=array_%A_%a.out
+   #SBATCH --time=10:00
+   #SBATCH --partition=express
+   #SBATCH --ntasks=1
+   #SBATCH --mem=1G
+
+   # Print the task id.
+   echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
+
+In this script, the %A and %a values in the output file name refer to the
+overall job ID and array task ID, respectively. We can submit the script (named
+array.sh) using the following command:
+
+.. code-block:: bash
+
+   sbatch --array=1-16 array.sh
+
+This will cause 16 jobs to be created with array IDs from 1 to 16. Each job will
+write out the line "My SLURM_ARRAY_TASK_ID: " followed by the ID number. Scripts
+can be written to take advantage of this indexing environmental variable. For
+example, a project could have a list of participants that should be processed in
+the same way, and the analysis script uses the array task ID as an index to say
+which participant is processed in each individual job. Bash, python, MATLAB, and
+most languages have specific ways of interacting with environmental variables.
+
+If you do not want to submit a full array, the ``--array`` directive can take a
+variety of inputs:
+
+.. code-block:: bash
+
+   # submit jobs 1,4, and 8
+   sbatch --array=1,4,8 array.sh
+
+   # submit jobs 1,3,5, and 7
+   sbatch --array=1-7:2 array.sh
+
+Additionally, the ``--array`` directive can be included with the rest of the
+SBATCH options in the script itself.
+
+
+Interactive Jobs
+----------------
+
+Batch jobs are meant to be submitted and not interacted with during execution.
+However, some jobs need user input during execution or need to use a GUI.
+Interactive jobs are meant to be used for these situations. 
+
+It is highly suggested to use the Cheaha :ref:`Open OnDemand` web portal for
+interactive jobs. Interactive sessions for certain software such as MATLAB and
+RStudio can be created directly from the browser while an HPC Desktop is
+available to access all of the other software on Cheaha.
+
+If you choose to use a standard ssh connection and VNC for your interactive job,
+you will need to request resources for your job from the command line after
+opening the VNC. You can do this using the following command:
+
+.. code-block:: bash
+
+   sinteractive --ntasks=1 --cpus-per-task=1 --mem-per-cpu=4G --time=1:00:00
+   --partition=express
+   
+Resources should be changed to fit the job's needs. An interactive job will then
+start on a compute node. You can tell if you are on a compute node by looking at
+the command line. It should have the form: ``[blazerid@c0XXX ~]`` where XXX is a
+number. 
+
+.. warning::
+
+   If your terminal says ``[blazerid@login ~]``, you are on the login node. NO
+   COMPUTE JOBS SHOULD BE RUN ON THE LOGIN NODE. If jobs are being run on the
+   login node, they will be deleted and the user will be warned.
+
+
+Requesting GPUs
+---------------
+
+For users creating machine learning models using GPUs, specific directives are
+necessary. First, your job will need to use the pascalnodes partition. No other
+partition has access to GPUs.
+
+In order to request GPU resources, you will need to include the ``--gres=gpu:#``
+where ``#`` is the number of requested GPUs. You will also need to select a
+number of CPUs, the same as previously. CPUs feed data to the GPUs, keep GPU
+usage rate high as long as a sufficient number of CPUs are requested. Currently,
+Nvidia P100 GPUs are available to users on Cheaha. 
+
+
+.. note::
+   
+   It is suggested that at least 2 CPUs are requested for every GPU to begin
+   with. The user should increase the number of cores on subsequent job
+   submissions if necessary. Look at 
+   :doc:`how to manage jobs </slurm/job_management.rst>` for more information. 
+
