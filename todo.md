@@ -12,7 +12,7 @@
         - Turn
           https://gitlab.rc.uab.edu/rc-training-sessions/how-to-slurm/-/blob/main/slurm_how_to.ipynb
           into its own page
-        - Estimating compute resources is priority
+        - Estimating compute resources is priority (mostly done, needs review)
     - Outside links
         - github/gitlab for RC Data Science
         - Youtube for DSC
