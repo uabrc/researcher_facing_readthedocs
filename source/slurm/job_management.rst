@@ -139,6 +139,8 @@ descriptions can be found on the `sacct documentation
 <https://slurm.schedmd.com/sacct.html>`__ under Job Accounting Fields.
 
 
+.. _job-efficiency:
+
 Evaluating Job Efficiency
 -------------------------
 

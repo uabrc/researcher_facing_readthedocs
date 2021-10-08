@@ -47,12 +47,8 @@ Using Cheaha
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Create Account
 
-   /user_registration/uab_user
-   /user_registration/xias_users
-   /user_registration/xias_sites
-   /user_registration/xias_guest
+   /user_registration/index
 
 
 .. Using Cheaha
