@@ -7,6 +7,19 @@ appropriate Slurm directives at the top of the script telling the scheduler the
 requested resources. Common Slurm directives can be seen below along with simple
 examples for both single batch jobs and array batch jobs
 
+Common Slurm Terminology
+------------------------
+
+- Node: A subdivision of the cluster that contains multiple cores.
+  - Login nodes: Controls user access to Cheaha. Low count and shared among all
+  users. DO NOT RUN JOBS ON THE LOGIN NODE
+  - Compute nodes: Dedicated nodes for running user jobs.
+- Core: A single CPU
+- Partition: A job queue to submit your job to. Different partitions have
+  different resource limits and priority.
+- Batch jobs: Scripts to submit to the SLURM scheduler. Should run with no user
+  input or graphical user interface (GUI).
+
 Basic Slurm Directives
 ----------------------
 

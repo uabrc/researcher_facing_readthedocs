@@ -26,20 +26,6 @@ The basic workflow for non-interactive jobs follows:
 7. Review the results, and modify/rerun if necessary (``sacct`` and ``seff``)
 8. Remove data from ``$USER_SCRATCH``
 
-Common Slurm Terminology
-------------------------
-
-- Node: A subdivision of the cluster that contains multiple cores.
-  - Login nodes: Controls user access to Cheaha. Low count and shared among all
-  users. DO NOT RUN JOBS ON THE LOGIN NODE
-  - Compute nodes: Dedicated nodes for running user jobs.
-- Core: A single CPU
-- Partition: A job queue to submit your job to. Different partitions have
-  different resource limits and priority.
-- Batch jobs: Scripts to submit to the SLURM scheduler. Should run with no user
-  input or graphical user interface (GUI).
-
-
 .. toctree::
   :maxdepth: 2
 
