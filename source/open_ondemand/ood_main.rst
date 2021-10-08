@@ -1,5 +1,5 @@
-Open OnDemand HomePage
-======================
+HomePage
+========
 
 After account creation, you will see the OOD homepage:
 
