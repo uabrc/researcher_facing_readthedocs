@@ -15,7 +15,7 @@ list of the very common ones are listed here:
 
 1. ``--job-name``: The name of the job that appears when using ``squeue``
 2. ``--ntasks``: The number of nodes a job needs
-3. ``--cpus-per-node``: The number of cores to request on each node
+3. ``--cpus-per-task``: The number of cores to request for each task (default:1)
 4. ``--partition``: The partition to submit the job to. Partition details can be
    seen below
 5. ``--time``: Amount of time the job is estimated to run for. Acceptable time
@@ -50,6 +50,9 @@ Notes:
 - Each user has a maximum amount of requestable resources across all jobs.
   Submitted jobs beyond this resource limit will be kept in the queue until
   a user's prior jobs have completed.
+- If a script finishes executing before the requested time limit, the job will
+  automatically close. However requesting the max amount of time will cause
+  scheduler priority to decrease.
 
 
 Single Batch Job
@@ -63,18 +66,17 @@ An example script using some of the listed directives can be seen below:
     #
     #SBATCH --job-name=test
     #SBATCH --ntasks=1
-    #SBATCH --cpus-per-node=1
+    #SBATCH --cpus-per-task=1
     #SBATCH --partition=express
     #SBATCH --time=10:00
     #SBATCH --mem-per-cpu=1G
-    #SBATCH --output=$HOME/test.out
+    #SBATCH --output=test.out
 
     echo "Hello World"
 
 This script requests 1 core on 1 node with 1 GB of RAM on the express partition
 for 10 minutes. The output of the commands in the script, the ``echo`` command
-here, can be seen in the ``$HOME/test.out`` file that will be created when the
-script executes.
+here, can be seen in the ``test.out`` file that will be created when the script executes.
 
 If the script is saved as ``$HOME/example.sh``, it can be submitted using the
 following command from the command line:
@@ -167,8 +169,8 @@ number.
 
 .. warning::
 
-   If your terminal says ``[blazerid@login ~]``, you are on the login node. NO
-   COMPUTE JOBS SHOULD BE RUN ON THE LOGIN NODE. If jobs are being run on the
+   If your terminal says ``[blazerid@loginXXX ~]``, you are on the login node.
+   NO COMPUTE JOBS SHOULD BE RUN ON THE LOGIN NODE. If jobs are being run on the
    login node, they will be deleted and the user will be warned.
 
 
@@ -176,20 +178,31 @@ Requesting GPUs
 ---------------
 
 For users creating machine learning models using GPUs, specific directives are
-necessary. First, your job will need to use the pascalnodes partition. No other
-partition has access to GPUs.
+necessary. First, your job will need to use the ``pascalnodes`` partition. No
+other partition has access to GPUs.
 
 In order to request GPU resources, you will need to include the ``--gres=gpu:#``
 where ``#`` is the number of requested GPUs. You will also need to select a
-number of CPUs, the same as previously. CPUs feed data to the GPUs, keep GPU
-usage rate high as long as a sufficient number of CPUs are requested. Currently,
-Nvidia P100 GPUs are available to users on Cheaha. 
+number of CPUs, the same as previously. CPUs feed data to the GPUs, keeping GPU
+usage rate high as long as a sufficient number of CPUs are requested.
 
 
 .. note::
    
    It is suggested that at least 2 CPUs are requested for every GPU to begin
-   with. The user should increase the number of cores on subsequent job
-   submissions if necessary. Look at 
-   :doc:`how to manage jobs </slurm/job_management.rst>` for more information. 
+   with. The user should monitor and adjust the number of cores on subsequent
+   job submissions if necessary. Look at 
+   :doc:`how to manage jobs</slurm/job_management>` for more information. 
+
+In addition, you will need to load a CUDA toolkit for the script to access the
+GPUs. Depending on which version of tensorflow or pytorch you are using, a
+different version of the CUDA toolkit may be required. For instance, tensorflow
+version 2.5.0 requires CUDA toolkit version 11.2 or higher. 
+
+Several CUDA toolkit versions have been installed as modules on Cheaha. To see
+which CUDA toolkits are available, use:
+
+.. code-block:: bash
+
+   module -r spider 'cuda.*toolkit'
 
