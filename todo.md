@@ -8,11 +8,11 @@
         - add link to Python virtual environments at bottom of
           ood_interactive/Jupyter when it's written
     - Using the module system
-    - Using SLURM (and yeah queues and how they work)
+    - Using SLURM (and queues and how they work) - Matt (mostly done, needs review)
         - Turn
           https://gitlab.rc.uab.edu/rc-training-sessions/how-to-slurm/-/blob/main/slurm_how_to.ipynb
           into its own page
-        - Estimating compute resources is priority
+        - Estimating compute resources is priority (mostly done, needs review)
     - Outside links
         - github/gitlab for RC Data Science
         - Youtube for DSC
