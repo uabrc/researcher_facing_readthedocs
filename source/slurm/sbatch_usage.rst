@@ -11,14 +11,20 @@ Common Slurm Terminology
 ------------------------
 
 - Node: A subdivision of the cluster that contains multiple cores.
+  
   - Login nodes: Controls user access to Cheaha. Low count and shared among all
-  users. DO NOT RUN JOBS ON THE LOGIN NODE
+    users. DO NOT RUN JOBS ON THE LOGIN NODE
+  
   - Compute nodes: Dedicated nodes for running user jobs.
+
 - Core: A single CPU
 - Partition: A job queue to submit your job to. Different partitions have
   different resource limits and priority.
+- Job: Any single or combination of commands that require computational
+  resources to perform. Can be interactive or submitted to the scheduler.
 - Batch jobs: Scripts to submit to the SLURM scheduler. Should run with no user
-  input or graphical user interface (GUI).
+  input or graphical user interface (GUI). Replicates commands in an order you
+  would run them on the command line.
 
 Basic Slurm Directives
 ----------------------
