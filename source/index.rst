@@ -42,25 +42,19 @@ Using Cheaha
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Create Account
 
-   /user_registration/uab_user.rst
-   /user_registration/xias_users.rst
-   /user_registration/xias_sites.rst
-   /user_registration/xias_guest.rst
+   /user_registration/index
 
 
-.. Accessing Cheaha
+.. Using Cheaha
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Using Cheaha
 
-   /open_ondemand/ood_main.rst
-   /open_ondemand/ood_files.rst
-   /open_ondemand/ood_jobs.rst
-   /open_ondemand/ood_interactive.rst
+   /slurm/index
+   /open_ondemand/index
 
 
 .. UAB Cloud

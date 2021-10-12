@@ -6,7 +6,7 @@ gives a basic overview of Slurm and how to use it.
 
 Slurm is software that gives users fair allocation of the cluster's resources.
 It schedules jobs based using resource requests such as number of CPUs, maximum
-memory (RAM) required per CPU, maximum run time, and many more.
+memory (RAM) required per CPU, maximum run time, and more.
 
 The main Slurm documentation can be found at `the Slurm site
 <https://slurm.schedmd.com/>`__. The `Slurm Quickstart
@@ -26,14 +26,9 @@ The basic workflow for non-interactive jobs follows:
 7. Review the results, and modify/rerun if necessary (``sacct`` and ``seff``)
 8. Remove data from ``$USER_SCRATCH``
 
+.. toctree::
+  :maxdepth: 2
 
-Required Slurm Directives
--------------------------
-
-Slurm has many directives a researcher can use when creating a job, but there
-are a couple that are imperative:
-
-1. ``--ntasks``: This refers to the number of nodes a job
-Slurm Partitions
-----------------
+  sbatch_usage
+  job_management
 
