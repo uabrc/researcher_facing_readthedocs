@@ -14,10 +14,10 @@ resources are freely available to use by any researcher or instructor at UAB.
 
 
 
- .. MKD: currently thinking we place and edit all TOC in index, but hide them
-    from rendering on the actual page. They'll appear on the sidebar. Then we
-    keep things on the mainpage to a minimum, like the CGDS docs, Only including
-    quickstart information. Modelled after https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html
+.. MKD: currently thinking we place and edit all TOC in index, but hide them
+   from rendering on the actual page. They'll appear on the sidebar. Then we
+   keep things on the mainpage to a minimum, like the CGDS docs, Only including
+   quickstart information. Modelled after https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html
 
 Cheaha Quickstart
 -----------------
@@ -47,25 +47,19 @@ Using Cheaha
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Create Account
 
-   /user_registration/uab_user.rst
-   /user_registration/xias_users.rst
-   /user_registration/xias_sites.rst
-   /user_registration/xias_guest.rst
+   /user_registration/index
 
 
-.. Accessing Cheaha
+.. Using Cheaha
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: Using Cheaha
 
-   /open_ondemand/ood_main.rst
-   /open_ondemand/ood_files.rst
-   /open_ondemand/ood_jobs.rst
-   /open_ondemand/ood_interactive.rst
+   /slurm/index
+   /open_ondemand/index
 
 
 .. UAB Cloud

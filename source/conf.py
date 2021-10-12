@@ -83,6 +83,18 @@ html_theme = "sphinx_rtd_theme"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_logo = "html/_static/uab-it-logo.png"
+html_theme_options = {
+    'logo_only': True,
+    'display_version': False,
+
+    # toc options
+    'collapse_navigation': True,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
+}
 
 # Prolog:
 rst_prolog = f"""
