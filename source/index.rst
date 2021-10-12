@@ -72,6 +72,15 @@ Using Cheaha
    openstack/network_setup_basic
    openstack/volume_setup_basic
 
+.. Resources
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Resources
+
+   resources/globus.rst
+
 Indices and tables
 ==================
 
