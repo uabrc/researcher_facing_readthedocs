@@ -1,16 +1,5 @@
-Open OnDemand
-====================
-
-Open OnDemand (OOD) is a user-friendly web interface for accessing Cheaha and
-all of its associated software and tools without needing to manage a person VNC
-session. It is currently the preferred method for accessing Cheaha at UAB.
-
-OOD is available at `<rc.uab.edu>`__. Navigate there and authenticate with your
-UAB credentials. Outside reseachers will need to use XIAS. If you do not have a
-Cheaha account, you will be requested to make one.
-
-Homepage
---------------------
+HomePage
+========
 
 After account creation, you will see the OOD homepage:
 
@@ -58,4 +47,3 @@ Shell Access``. You can use this exactly like a standard ``ssh`` tunnel.
 
     Using the shell terminal in this way puts you on the login node. Do not run
     any compute tasks on the login node. Request a compute node first!
-
