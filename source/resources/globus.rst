@@ -4,6 +4,11 @@ Globus
 Setting up Globus Connect Personal
 ----------------------------------
 
+`Globus Connect Personal <https://www.globus.org/globus-connect-personal>`_ is software meant to be installed on local machines such as laptops, desktops, workstations and self-owned, local-scale servers. Globus maintains excellent documentation for installation on `MacOS <https://docs.globus.org/how-to/globus-connect-personal-mac/>`_, `Linux <https://docs.globus.org/how-to/globus-connect-personal-linux>`_ and `Windows <https://docs.globus.org/how-to/globus-connect-personal-windows>`_.
+
+To verify your installation is complete, please visit `<https://app.globus.org>`_ and log in. Click "Endpoints" in the left-hand navigation pane and then click the "Administered By You" tab. Look in the table for the endpoint you just created.
+
+
 Moving Data Between Endpoints
 -----------------------------
 
