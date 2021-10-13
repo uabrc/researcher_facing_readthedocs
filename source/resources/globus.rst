@@ -104,6 +104,7 @@ More Information
 
 A `Globus FAQ <https://docs.globus.org/faq/globus-connect-endpoints/>`_ is available for additional information on endpoints and transfers.
 
+
 Using Bookmarks
 ---------------
 
@@ -156,3 +157,5 @@ It is NOT RECOMMENDED to make Globus Connect Personal endpoints public as this i
 
 Setting up Globus Connect Server
 --------------------------------
+
+Under construction!
