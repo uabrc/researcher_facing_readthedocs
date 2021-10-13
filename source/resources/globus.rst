@@ -140,16 +140,16 @@ It is NOT RECOMMENDED to make Globus Connect Personal endpoints public as this i
 9. Click "Add Permissions -- Share With" to share your endpoint with other users.
 10. Fill out the form.
 
-   a. Optionally enter a path within the shared endpoint or use the Browse button. If you leave the path as just a slash, the entire shared endpoint will be shared with these users.
-   b. Select who to share with.
+    a. Optionally enter a path within the shared endpoint or use the Browse button. If you leave the path as just a slash, the entire shared endpoint will be shared with these users.
+    b. Select who to share with.
 
-      i. User - One or more users.
-      ii. Group - All members of a group.
-      iii. All Users - All globus users. **Warning! This exposes data publicly!**
+       i. User - One or more users.
+       ii. Group - All members of a group.
+       iii. All Users - All globus users. **Warning! This exposes data publicly!**
 
-   c. Search for users to add, or a group, depending on your choice above. You should be able to find any globus user using the search box. **Warning! Be certain of which user you are selecting! Check the email domain!**
-   d. If adding users, optionally enter a message so they know why they are being added.
-   e. Select permissions. Read is automatically selected and cannot be changed. Write permissions are optional.
+    c. Search for users to add, or a group, depending on your choice above. You should be able to find any globus user using the search box. **Warning! Be certain of which user you are selecting! Check the email domain!**
+    d. If adding users, optionally enter a message so they know why they are being added.
+    e. Select permissions. Read is automatically selected and cannot be changed. Write permissions are optional.
 
 11. Click "Add Permission" to add permissions for these users or groups. You will be returned to the page for the shared endpoint and should be on the "Permissions" tab.
 
