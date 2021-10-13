@@ -117,5 +117,42 @@ To manage bookmarks, click "Bookmarks" in the left-hand navigation pane. Click t
 .. figure:: ./images/globus_061_manage_bookmarks.png
    :alt: Globus Bookmarks interface showing four bookmarks.
 
+
+Setting up a Shared Collection from a Globus Connect Personal Endpoint
+----------------------------------------------------------------------
+
+It is NOT RECOMMENDED to make Globus Connect Personal endpoints public as this is insecure. It is more difficult to manage access controls for the entire Globus Connect Personal endpoint than for a shared collection. Be secure, create a shared collection!
+
+1. Click "Endpoints" in the left-hand navigation pane.
+2. Click the "Administered By You" tab.
+3. In the table, find the endpoint you wish to share data from and click its name. You will be taken to the page for that endpoint.
+4. Click the "Collections" tab.
+5. Click the "Add a Guest Collection" button.
+6. Fill out the form.
+
+   a. Manually enter a path or click the Browse button to select a folder.
+   b. Give a short but memorable name for your shared collection. This information will be useful for your collaborators.
+   c. Optionally fill in a more detailed description of the shared collection for your records.
+   d. Optionally fill in searchable keywords.
+
+7. Click "Create Share" to move to the next step. You will be taken to the page for the newly created collection, which is now a full-fledged endpoint. Any further references to "an endpoint" will be about the newly created, shared collection.
+8. Make sure you are on the "Permissions" tab.
+9. Click "Add Permissions -- Share With" to share your endpoint with other users.
+10. Fill out the form.
+
+   a. Optionally enter a path within the shared endpoint or use the Browse button. If you leave the path as just a slash, the entire shared endpoint will be shared with these users.
+   b. Select who to share with.
+
+      i. User - One or more users.
+      ii. Group - All members of a group.
+      iii. All Users - All globus users. **Warning! This exposes data publicly!**
+
+   c. Search for users to add, or a group, depending on your choice above. You should be able to find any globus user using the search box. **Warning! Be certain of which user you are selecting! Check the email domain!**
+   d. If adding users, optionally enter a message so they know why they are being added.
+   e. Select permissions. Read is automatically selected and cannot be changed. Write permissions are optional.
+
+11. Click "Add Permission" to add permissions for these users or groups. You will be returned to the page for the shared endpoint and should be on the "Permissions" tab.
+
+
 Setting up Globus Connect Server
 --------------------------------
