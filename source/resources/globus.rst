@@ -4,15 +4,15 @@ Globus
 Setting up Globus Connect Personal
 ----------------------------------
 
-`Globus Connect Personal <https://www.globus.org/globus-connect-personal>`_ is software meant to be installed on local machines such as laptops, desktops, workstations and self-owned, local-scale servers. Globus maintains excellent documentation for installation on `MacOS <https://docs.globus.org/how-to/globus-connect-personal-mac/>`_, `Linux <https://docs.globus.org/how-to/globus-connect-personal-linux>`_ and `Windows <https://docs.globus.org/how-to/globus-connect-personal-windows>`_.
+`Globus Connect Personal <https://www.globus.org/globus-connect-personal>`__ is software meant to be installed on local machines such as laptops, desktops, workstations and self-owned, local-scale servers. Globus maintains excellent documentation for installation on `MacOS <https://docs.globus.org/how-to/globus-connect-personal-mac/>`__, `Linux <https://docs.globus.org/how-to/globus-connect-personal-linux>`__ and `Windows <https://docs.globus.org/how-to/globus-connect-personal-windows>`__.
 
-To verify your installation is complete, please visit `<https://app.globus.org>`_ and log in. Click "Endpoints" in the left-hand navigation pane and then click the "Administered By You" tab. Look in the table for the endpoint you just created.
+To verify your installation is complete, please visit `<https://app.globus.org>`__ and log in. Click "Endpoints" in the left-hand navigation pane and then click the "Administered By You" tab. Look in the table for the endpoint you just created.
 
 
 Moving Data Between Endpoints
 -----------------------------
 
-1. Log in to the Globus App online at https://app.globus.org using UAB Single Sign-On (SSO). Start typing "University of Alabama at Birmingham" into the "Use your existing organizational login" text box and selected it when it appears in the list.
+1. Log in to the Globus App online at `<https://app.globus.org>`__ using UAB Single Sign-On (SSO). Start typing "University of Alabama at Birmingham" into the "Use your existing organizational login" text box and selected it when it appears in the list.
 
    .. figure:: ./images/globus_001_login.png
       :alt: Globus login page with University of Alabama at Birmingham entered into the text box.
@@ -102,7 +102,7 @@ Common Errors
 More Information
 ~~~~~~~~~~~~~~~~
 
-A `Globus FAQ <https://docs.globus.org/faq/globus-connect-endpoints/>`_ is available for additional information on endpoints and transfers.
+A `Globus FAQ <https://docs.globus.org/faq/globus-connect-endpoin/>`__ is available for additional information on endpoints and transfers.
 
 
 Using Bookmarks
