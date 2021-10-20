@@ -51,9 +51,9 @@ def build_inline_code_highlighting_roles() -> str:
 # -- Project information -----------------------------------------------------
 
 # TODO change these lines
-project = "UAB RC Documentation"
-copyright = "2021, William Warriner"
-author = "William Warriner"
+project = "UAB Research Computing Documentation"
+copyright = "2021, The University of Alabama at Birmingham"
+author = "UAB Research Computing"
 
 
 # -- General configuration ---------------------------------------------------
