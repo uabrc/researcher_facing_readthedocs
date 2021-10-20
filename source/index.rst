@@ -75,6 +75,7 @@ Using Cheaha
    :caption: Resources
 
    resources/globus.rst
+   python.rst
 
 Indices and tables
 ==================
