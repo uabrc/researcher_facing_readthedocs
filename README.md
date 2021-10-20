@@ -1,5 +1,11 @@
 # Researcher Facing Read the Docs
 
+## Contributor Notes
+
+### Accessibility
+
+Color vision deficiency checker: https://www.toptal.com/designers/colorfilter/
+
 ## Developer Notes
 
 ### Images
@@ -15,6 +21,8 @@
 
 ### Branding Guidance
 
+- Brand main page: https://www.uab.edu/toolkit/branding
+- Brand colors: https://www.uab.edu/toolkit/brand-basics/colors
 - Copyright guidance: https://www.uab.edu/toolkit/trademarks-licensing/uab-trademarks
 
 ### Known Issues
