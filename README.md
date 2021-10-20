@@ -13,6 +13,10 @@
 
 - External targets should be anonymous, not explicit. Single underscores are "explicit targets", double underscores are "anonymous targets". External links should be formatted as ``Link text `<URL>`__``, note the double underscore.
 
+### Branding Guidance
+
+- Copyright guidance: https://www.uab.edu/toolkit/trademarks-licensing/uab-trademarks
+
 ### Known Issues
 
 - Some inline languages add an `<s>` tag in html, leading to strikethroughs. This occurs for string literals in MATLAB and R.
