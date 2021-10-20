@@ -51,7 +51,7 @@
 
 # Low
 
-- Job Creator in OOD
+- Job Creator in OOD (done)
 - List of heavily used modules with some extra information like versioning?
 - Training events and materials available
     - integration with calendar to add entries when new events are scheduled?
