@@ -51,9 +51,9 @@ def build_inline_code_highlighting_roles() -> str:
 # -- Project information -----------------------------------------------------
 
 # TODO change these lines
-project = "Openstack How To"
-copyright = "2021, William Warriner"
-author = "William Warriner"
+project = "UAB Research Computing Documentation"
+copyright = "2021, The University of Alabama at Birmingham"
+author = "UAB Research Computing"
 
 
 # -- General configuration ---------------------------------------------------
@@ -61,7 +61,8 @@ author = "William Warriner"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["sphinx.ext.autosectionlabel"]
+extensions = ["sphinx.ext.autosectionlabel", "sphinxcontrib.bibtex"]
+bibtex_bibfiles = ["_test/bibtex/mybib.bib"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -77,12 +78,23 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "alabaster"
+html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_logo = "html/_static/uab-it-logo.png"
+html_theme_options = {
+    "logo_only": True,
+    "display_version": False,
+    # toc options
+    "collapse_navigation": True,
+    "sticky_navigation": True,
+    "navigation_depth": 4,
+    "includehidden": True,
+    "titles_only": False,
+}
 
 # Prolog:
 rst_prolog = f"""
