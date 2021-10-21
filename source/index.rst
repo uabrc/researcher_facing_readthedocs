@@ -62,9 +62,10 @@ Using Cheaha
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: UAB Cloud
+   :caption: cloud.rc
 
    openstack/network_setup_basic
+   openstack/instance_setup_basic
    openstack/volume_setup_basic
 
 .. Resources
