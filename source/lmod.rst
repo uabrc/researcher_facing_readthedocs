@@ -36,16 +36,21 @@ expression will be returned along with their installed versions.
     # list modules matching a regular expression
     module -r spider <regex>
 
-Loading Packages
-----------------
+Loading Modules
+---------------
 
-To load packages, run:
+To load modules, run:
 
 .. code-block:: bash
 
-    module load package1 package2 ...
+    module load module1 module2 ...
 
-If you only specify a module name, the most recently installed version will be 
+.. note::
+    If you only specify a module name without an accompanying version tag, the
+    most recently installed version will be loaded into the workspace. If your
+    scripts depend on specific versions of software being used, explicitly load
+    the module version you need.
+
 To unload packages, run:
 
 .. code-block:: bash
@@ -57,4 +62,3 @@ If you want to revert to the default modules, you can use:
 .. code-block:: bash
 
     module reset
-
