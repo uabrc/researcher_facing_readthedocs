@@ -1,0 +1,60 @@
+Modules and Applications
+========================
+
+Most software available on Cheaha is installed as modules, managed by the Lmod
+system. This document will provide a basic rundown of using Lmod commands to
+customize a software environment. ``module`` is the main command used to
+interface with module files in Lmod.
+
+
+Listing and Searching Modules
+-----------------------------
+
+To begin, all module commands are run from the terminal. To know what software
+is installed on Cheaha, use the ``avail`` command.
+
+.. code-block:: bash
+
+    module avail
+
+If you need to know what software is already loaded in your environment, run:
+
+.. code-block:: bash
+
+    module list
+
+If there is specific software you want to search for, you can use the ``spider``
+subcommand, and provide a string or regular expression to match against. All
+modules containing the string (case-insensitive) or matching the regular
+expression will be returned along with their installed versions.
+
+.. code-block:: bash
+
+    # list modules containing string
+    module spider <string>
+
+    # list modules matching a regular expression
+    module -r spider <regex>
+
+Loading Packages
+----------------
+
+To load packages, run:
+
+.. code-block:: bash
+
+    module load package1 package2 ...
+
+If you only specify a module name, the most recently installed version will be 
+To unload packages, run:
+
+.. code-block:: bash
+
+    module unload package1 package2 ...
+
+If you want to revert to the default modules, you can use:
+
+.. code-block:: bash
+
+    module reset
+
