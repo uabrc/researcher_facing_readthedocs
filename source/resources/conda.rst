@@ -1,37 +1,54 @@
-Python
-======
+Anaconda
+========
 
 Python is a high level programming language that is widely used in many branches
 of science. The scientific python ecosystem is available to researchers as
-Anaconda modules on Cheaha. Both python 2 and python 3 are installed. In order
-to see the different versions of each, use:
+Anaconda modules on Cheaha. Modules for both python 2 and python 3 are
+installed. In order to see the different versions of each, use:
 
 .. code-block::
 
     module spider Anaconda
 
+Loading Anaconda
+----------------
+
+When planning a project, you should have an idea of which python version you
+need to use. Python 3 is the current standard and is used by the Anaconda3
+modules. After loading one of the modules, use ``python --version`` to check the
+version number.
+
+Anaconda modules and their corresponding python versions can be seen in the
+table below:
+
+.. csv-table:: Python Versions
+    :file: conda-versions.csv
+    :widths: 50,50
+    :header-rows: 1
+    :align: center
+
+If a necessary version is not required, choose the most recent version, ``Anaconda3/2020.11``.
+
 Libraries and Virtual Environments
 ----------------------------------
 
-Anaconda includes a few very common libraries such as scikit-learn, pandas,
-numpy, and scipy by default. However, most projects will need some external
-libraries as well using ``pip`` or ``conda install``. In order to install
-external libraries, users will need to create a virtual environment or use one
-of the defaults.
-
-Python virtual environments are self-contained environments with necessary
+Anaconda virtual environments are self-contained environments with necessary
 packages for specific projects. It is recommended to have a separate environment
 for each project you have. This solves cases where different projects have
 dependencies on different versions of the same package. 
 
+New virtual environments include a few very common libraries such as
+scikit-learn, pandas, numpy, and scipy by default. However, most projects will
+need to install some external libraries as well using ``pip`` or ``conda``.
+
 Here, we will go through instructions for creating and managing Anaconda
-environments. More complete information on this process can be found at the
+environments including installing new libraries. More complete information on this process can be found at the
 `Anaconda documentation
 <https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#>`__.
 
 
 Create an Environment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 In order to create a basic environment with the default packages, use the
 ``conda create`` command:
@@ -48,13 +65,13 @@ To replicate an environment using a YAML file, use:
 .. code-block:: bash
 
     # replicate an environment from a YAML file named env.yml
-    conda create -n <env> -f env.yml
+    conda create -n <env> -f <path/to/env.yml>
 
 By default, all of your conda environments are stored in
 ``/home/<user>/.conda/envs``.
 
 Activate an Environment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 From here, you can activate the environment using either ``source`` or ``conda``:
 
@@ -76,7 +93,7 @@ Once the environment is activated, you are allowed to install whichever python
 libraries you need for your analysis.
 
 Install Libraries
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 The base package manager for python is ``pip``. The basic way to use ``pip`` is
 (replace <package> with the package name, omitting <>):
@@ -112,7 +129,7 @@ Generally, if a package needs to be downloaded from a specific conda channel, it
 will mention that in its installation instructions.
 
 Running Command-Line Python
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Python code can be run an individual commands from the command line. In order to
 access a python terminal, use the ``python`` or ``python3`` command in the
@@ -138,7 +155,7 @@ Any optional inputs the script has can be listed after the name of the script.
 
 
 Deactivating an Environment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 An environment can be deactivated using either ``source`` or ``conda``:
 

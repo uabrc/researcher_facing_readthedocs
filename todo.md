@@ -46,7 +46,7 @@
     - How to transfer really big files with Globus/other technologies   
 - SLURM queues and how queues work (meaning their limits per user, a practical
   explanation of how priority handled, etc)
-- Job arrays?
+- Job arrays? (done)
 
 
 # Low
