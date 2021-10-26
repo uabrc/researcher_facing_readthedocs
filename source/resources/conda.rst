@@ -27,7 +27,10 @@ table below:
     :header-rows: 1
     :align: center
 
-If a necessary version is not required, choose the most recent version, ``Anaconda3/2020.11``.
+If a necessary version is not required, choose the most recent version,
+``Anaconda3/2020.11``. Alternatively, the necessary python version can specified
+when creating a virtual environment and will be downloaded and installed
+regardless of if it is currently installed on the cluster.
 
 Libraries and Virtual Environments
 ----------------------------------
