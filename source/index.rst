@@ -55,6 +55,7 @@ Using Cheaha
 
    /slurm/index
    /open_ondemand/index
+   /lmod.rst
 
 
 .. UAB Cloud
@@ -75,6 +76,7 @@ Using Cheaha
    :caption: Resources
 
    resources/globus.rst
+   python.rst
 
 Indices and tables
 ==================
