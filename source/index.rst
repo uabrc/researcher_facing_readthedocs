@@ -55,6 +55,7 @@ Using Cheaha
 
    /slurm/index
    /open_ondemand/index
+   /lmod.rst
 
 
 .. UAB Cloud

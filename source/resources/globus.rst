@@ -4,10 +4,15 @@ Globus
 Setting up Globus Connect Personal
 ----------------------------------
 
+`Globus Connect Personal <https://www.globus.org/globus-connect-personal>`__ is software meant to be installed on local machines such as laptops, desktops, workstations and self-owned, local-scale servers. Globus maintains excellent documentation for installation on `MacOS <https://docs.globus.org/how-to/globus-connect-personal-mac/>`__, `Linux <https://docs.globus.org/how-to/globus-connect-personal-linux>`__ and `Windows <https://docs.globus.org/how-to/globus-connect-personal-windows>`__.
+
+To verify your installation is complete, please visit `<https://app.globus.org>`__ and log in. Click "Endpoints" in the left-hand navigation pane and then click the "Administered By You" tab. Look in the table for the endpoint you just created.
+
+
 Moving Data Between Endpoints
 -----------------------------
 
-1. Log in to the Globus App online at https://app.globus.org using UAB Single Sign-On (SSO). Start typing "University of Alabama at Birmingham" into the "Use your existing organizational login" text box and selected it when it appears in the list.
+1. Log in to the Globus App online at `<https://app.globus.org>`__ using UAB Single Sign-On (SSO). Start typing "University of Alabama at Birmingham" into the "Use your existing organizational login" text box and selected it when it appears in the list.
 
    .. figure:: ./images/globus_001_login.png
       :alt: Globus login page with University of Alabama at Birmingham entered into the text box.
@@ -97,7 +102,8 @@ Common Errors
 More Information
 ~~~~~~~~~~~~~~~~
 
-A `Globus FAQ <https://docs.globus.org/faq/globus-connect-endpoints/>`_ is available for additional information on endpoints and transfers.
+A `Globus FAQ <https://docs.globus.org/faq/globus-connect-endpoin/>`__ is available for additional information on endpoints and transfers.
+
 
 Using Bookmarks
 ---------------
@@ -112,5 +118,82 @@ To manage bookmarks, click "Bookmarks" in the left-hand navigation pane. Click t
 .. figure:: ./images/globus_061_manage_bookmarks.png
    :alt: Globus Bookmarks interface showing four bookmarks.
 
+
+Managing Shared Collections from a Globus Connect Personal Endpoint
+-------------------------------------------------------------------
+
+It is NOT RECOMMENDED to make Globus Connect Personal endpoints public as this is insecure. It is more difficult to manage access controls for the entire Globus Connect Personal endpoint than for a shared collection. Shared collections make it simpler to share different data with distinct collaborators, and to manage who has access to what data. Be secure, use shared collections!
+
+
+Creating a Shared Collection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Click "Endpoints" in the left-hand navigation pane.
+2. Click the "Administered By You" tab.
+
+   .. figure:: ./images/globus_100_shared_admin_tab.png
+      :alt: Globus Bookmarks interface showing four bookmarks.
+
+3. In the table, find the endpoint you wish to share data from and click its name. You will be taken to the page for that endpoint.
+4. Click the "Collections" tab.
+
+   .. figure:: ./images/globus_101_shared_collections.png
+      :alt: Globus Bookmarks interface showing four bookmarks.
+
+5. Click the "Add a Guest Collection" button.
+6. Fill out the form.
+
+   .. figure:: ./images/globus_102_shared_collection_form.png
+      :alt: Globus Bookmarks interface showing four bookmarks.
+
+   a. Manually enter a path or click the Browse button to select a folder.
+   b. Give a short but memorable name for your shared collection. This information will be useful for your collaborators.
+   c. Optionally fill in a more detailed description of the shared collection for your records.
+   d. Optionally fill in searchable keywords.
+
+7. Click "Create Share" to move to the next step. You will be taken to the page for the newly created collection, which is now a full-fledged endpoint. Any further references to "an endpoint" will be about the newly created, shared collection.
+8. Make sure you are on the "Permissions" tab. You should see a permissions table with your name in the first row.
+
+   .. figure:: ./images/globus_103_shared_permissions.png
+      :alt: Globus Bookmarks interface showing four bookmarks.
+
+9.  Click "Add Permissions -- Share With" to share your endpoint with other users.
+10. Fill out the form.
+
+    .. figure:: ./images/globus_104_shared_add_permissions.png
+       :alt: Globus Bookmarks interface showing four bookmarks.
+
+    a. Optionally enter a path within the shared endpoint or use the Browse button. If you leave the path as just a slash, the entire shared endpoint will be shared with these users.
+    b. Select who to share with.
+
+       i. User - One or more users.
+       ii. Group - All members of a group.
+       iii. All Users - All globus users. **Warning! This exposes data publicly!**
+
+    c. Search for users to add, or a group, depending on your choice above. You should be able to find any globus user using the search box. **Warning! Be certain of which user you are selecting! Check the email domain!**
+    d. If adding users, optionally enter a message so they know why they are being added.
+    e. Select permissions. Read is automatically selected and cannot be changed. Write permissions are optional.
+
+11. Click "Add Permission" to add permissions for these users or groups. You will be returned to the page for the shared endpoint and should be on the "Permissions" tab and should see the user or group in the table.
+
+
+Deleting a Shared Collection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Click "Endpoints" in the left-hand navigation pane, then c
+2. Click the "Administered By You" tab.
+
+   .. figure:: ./images/globus_100_shared_admin_tab.png
+      :alt: Globus Bookmarks interface showing four bookmarks.
+
+3. Click the right caret ">" icon at the right side of the row with the endpoint you wish to delete. You will be taken to the information page for that endpoint.
+4. Click "X Delete Endpoint" and a confirmation dialog will open at the top of the page. Respond to the dialog to delete the endpoint, or to cancel.
+
+   .. figure:: ./images/globus_105_shared_delete.png
+      :alt: Globus Bookmarks interface showing four bookmarks.
+
+
 Setting up Globus Connect Server
 --------------------------------
+
+Under construction!
