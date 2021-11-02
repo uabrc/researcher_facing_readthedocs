@@ -77,6 +77,7 @@ Using Cheaha
 
    resources/globus.rst
    resources/conda.rst
+   resources/storage.rst
 
 Indices and tables
 ==================
