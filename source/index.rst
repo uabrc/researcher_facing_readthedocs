@@ -68,14 +68,22 @@ Using Cheaha
    openstack/network_setup_basic
    openstack/volume_setup_basic
 
-.. Resources
+.. Data Management
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Resources
+   :caption: Data Management
 
-   resources/globus.rst
+   data_management/globus.rst
+
+.. Software
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Software
+
    python.rst
 
 Indices and tables
