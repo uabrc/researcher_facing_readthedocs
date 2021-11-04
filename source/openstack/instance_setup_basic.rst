@@ -1,17 +1,12 @@
 Basic Instance Setup
 ====================
 
-Instances are the basic unit of compute on OpenStack. Requesting an instance
-involves a number of steps, and requires that a
-:doc:`network<network_setup_basic>` has already been setup. It is also possible
-to attach persistent reusable :doc:`volumes<volume_setup_basic>` to instances.
+Instances are the basic unit of compute on OpenStack. Requesting an instance involves a number of steps, and requires that a :doc:`network<network_setup_basic>` has already been setup. It is also possible to attach persistent reusable :doc:`volumes<volume_setup_basic>` to instances.
 
 Creating a Floating IP
 ----------------------
 
-Floating IPs are required if you want an instance to talk to devices on the
-internet. These IPs are a shared resource, so they must be allocated when needed
-and released when no longer needed.
+Floating IPs are required if you want an instance to talk to devices on the internet. These IPs are a shared resource, so they must be allocated when needed and released when no longer needed.
 
 1. Click "Network" in the left-hand navigation pane to open the fold-out menu.
 
@@ -45,19 +40,11 @@ and released when no longer needed.
 Creating a Key Pair
 -------------------
 
-A Key Pair is required for SSH access to OpenStack instances for security
-reasons.
+A Key Pair is required for SSH access to OpenStack instances for security reasons.
 
-Using a password protected Key Pair is highly recommended for
-additional security, as it buys time to revoke a key if it is compromised by an
-attacker. Currently, this is only possible by uploading a custom public key
-generated on your local machine.
+Using a password protected Key Pair is highly recommended for additional security, as it buys time to revoke a key if it is compromised by an attacker. Currently, this is only possible by uploading a custom public key generated on your local machine.
 
-Good practice is to only use one key pair per person and per local machine. So
-if you have two computers, each one will need its own key pair. If you have two
-users, each will need their own key pair. Private keys are secrets and should
-not be passed around. Copying the key increases the risk of the system being
-compromised by an attacker.
+Good practice is to only use one key pair per person and per local machine. So if you have two computers, each one will need its own key pair. If you have two users, each will need their own key pair. Private keys are secrets and should not be passed around. Copying the key increases the risk of the system being compromised by an attacker.
 
 1. Click "Compute" in the left-hand navigation pane to open the fold-out menu.
 
@@ -103,10 +90,7 @@ compromised by an attacker.
    .. figure:: ./images/key_pairs_005.png
       :alt: Image showing MINGW64 terminal on Windows. Commands have been used to move the private key file into the ssh folder and add it to the ssh agent.
 
-It is alternately possible to use a custom key pair created on your local
-machine. We assume you know how to create a key pair on your local machine and
-have already done so. To upload a key pair, replace steps 3 and 4 above with the
-following, perform step 5 from above, and skip step 6.
+It is alternately possible to use a custom key pair created on your local machine. We assume you know how to create a key pair on your local machine and have already done so. To upload a key pair, replace steps 3 and 4 above with the following, perform step 5 from above, and skip step 6.
 
 3. Click "Import Public Key" to open a dialog box.
 4. Fill out the dialog box.
@@ -121,15 +105,9 @@ following, perform step 5 from above, and skip step 6.
 Creating an Instance
 --------------------
 
-Creating an instance is possibly a step you'll perform often, depending on your
-workflow. There are many smaller steps to create an instance, so please take
-care to check all the fields when you create an instance.
+Creating an instance is possibly a step you'll perform often, depending on your workflow. There are many smaller steps to create an instance, so please take care to check all the fields when you create an instance.
 
-These instructions require that you've set up a
-:doc:`network<network_setup_basic>` and followed all of the instructions on the
-linked page. You should have a Network, Subnet, Router and SSH Security Group.
-You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
-:ref:`Floating IP<Create a Floating IP>`.
+These instructions require that you've set up a :doc:`network<network_setup_basic>` and followed all of the instructions on the linked page. You should have a Network, Subnet, outer and SSH Security Group. You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a :ref:`Floating IP<Create a Floating IP>`.
 
 1. Click "Compute" in the left-hand navigation pane to open the fold-out menu.
 
@@ -203,21 +181,21 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
       iii. When you find the best Network, click the button with an up arrow next to the Network.
       iv. The Network will move to the "Allocated" section above the "Available" section.
 
-    .. figure:: ./images/instances_006.png
-       :alt: Image showing the Launch Instance dialog. The Networks tab is selected.
+   .. figure:: ./images/instances_006.png
+      :alt: Image showing the Launch Instance dialog. The Networks tab is selected.
 
    b. Click "Next >" to move to the "Network Ports" tab.
 
-9.  "Network Ports" tab. *Coming Soon!*
+9. "Network Ports" tab. *Coming Soon!*
 
    a. Leave this tab empty.
 
-    .. figure:: ./images/instances_007.png
-       :alt: Image showing the Launch Instance dialog. The Network Ports tab is selected. The dialog form has been left empty.
+   .. figure:: ./images/instances_007.png
+      :alt: Image showing the Launch Instance dialog. The Network Ports tab is selected. The dialog form has been left empty.
 
    b. Click "Next >" to move to the "Security Groups" tab.
 
-10. "Security Groups tab. Security Groups allow for fine-grained control over external access to your instance. For more information see :doc:`Creating a Security Group<networking_setup_basics>` for more information.
+10. "Security Groups tab. Security Groups allow for fine-grained control over external access to your instance. For more information see :doc:`Creating a Security Group<network_setup_basic>` for more information.
 
     a. Pick the "ssh" Security Group from the "Available" section by pressing the up arrow next to it.
     b. The "default" Security Group should already be in the "Allocated" section.
@@ -280,8 +258,8 @@ You will also need to setup a :ref:`Key Pair<Creating a Key Pair>` and a
     d. Select a port in the "Port to be associated" drop down box.
     e. Click "Associate" to return to the "Instances" page and associate the selected IP.
 
-   .. figure:: ./images/instances_017.png
-      :alt: Image showing the Manage Floating IP Associations dialog. The form is filled out. The Floating IP Address created earlier is selected under IP Address. The port from the Instance my_instance is selected under Port to be Associated.
+    .. figure:: ./images/instances_017.png
+       :alt: Image showing the Manage Floating IP Associations dialog. The form is filled out. The Floating IP Address created earlier is selected under IP Address. The port from the Instance my_instance is selected under Port to be Associated.
 
 At this stage you should be able to SSH into your instance from on campus or on the UAB VPN.
 
@@ -290,9 +268,9 @@ SSH Into the Instance
 
 If you are following the steps from top to bottom, then at this stage you should be able to SSH into your instance from on campus or on the UAB VPN. To do so be sure your local machine has ssh and then use the following command If you are using a different operating system, such as CentOS, replace the user :code:`ubuntu` with :code:`centos` or whatever is appropriate.
 
-   .. code-block:: bash
+.. code-block:: bash
 
-      ssh ubuntu@<floating ip> -i ~/.ssh/<keypair_name>.pem
+   ssh ubuntu@<floating ip> -i ~/.ssh/<keypair_name>.pem
 
-   .. figure:: ./images/instances_020.png
-      :alt: Image showing the MINGW64 terminal on Windows. The ssh command has been used to login to the Floating IP Address using the -i command with the locally stored private key my_key_pair.pem. Login was successful. A banner page has been shown and a terminal prompt is waiting for input.
+.. figure:: ./images/instances_020.png
+   :alt: Image showing the MINGW64 terminal on Windows. The ssh command has been used to login to the Floating IP Address using the -i command with the locally stored private key my_key_pair.pem. Login was successful. A banner page has been shown and a terminal prompt is waiting for input.
