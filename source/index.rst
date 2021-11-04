@@ -96,7 +96,6 @@ Using Cheaha
    :hidden:
    :caption: Software
 
-   python.rst
 
 Indices and tables
 ==================
