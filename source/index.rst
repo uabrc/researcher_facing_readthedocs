@@ -57,17 +57,6 @@ Using Cheaha
    /open_ondemand/index
    /lmod.rst
 
-
-.. UAB Cloud
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: UAB Cloud
-
-   openstack/network_setup_basic
-   openstack/volume_setup_basic
-
 .. Resources
 
 .. toctree::
@@ -75,9 +64,38 @@ Using Cheaha
    :hidden:
    :caption: Resources
 
-   resources/globus.rst
-   resources/conda.rst
-   resources/storage.rst
+   /resources/support.rst
+   /resources/publications.rst
+   /resources/hardware.rst
+
+
+.. UAB Cloud
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: cloud.rc
+
+   openstack/network_setup_basic
+   openstack/instance_setup_basic
+   openstack/volume_setup_basic
+
+.. Data Management
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Data Management
+
+   data_management/globus.rst
+
+.. Software
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Software
+
 
 Indices and tables
 ==================
