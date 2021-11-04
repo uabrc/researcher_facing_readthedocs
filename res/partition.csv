@@ -1,0 +1,9 @@
+Name,Compute Type,Time Limit h,Node Limit
+interactive,cpu,2,1
+express,cpu,2,no limit
+short,cpu,12,44
+medium,cpu,50,44
+long,cpu,150,5
+pascalnodes,gpu,12,no limit
+pascalnodes-medium,gpu,48,no limit
+largemem,high memory,50,10

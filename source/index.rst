@@ -57,6 +57,17 @@ Using Cheaha
    /open_ondemand/index
    /lmod.rst
 
+.. Resources
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Resources
+
+   /resources/support.rst
+   /resources/publications.rst
+   /resources/hardware.rst
+
 
 .. UAB Cloud
 

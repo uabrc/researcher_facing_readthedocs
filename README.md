@@ -8,6 +8,20 @@ Color vision deficiency checker: https://www.toptal.com/designers/colorfilter/
 
 ## Developer Notes
 
+### Build steps (not yet automated)
+
+Make sure to build hardware tables using the following command.
+
+```shell
+python build_resource_tables.py --fabric hpc source/resources/data
+```
+
+Check URLs using the following. If the URLs are clean, there will be empty output.
+
+```shell
+python check_url.py
+```
+
 ### Images
 
 - Use `**/images` to store images in each subfolder.
