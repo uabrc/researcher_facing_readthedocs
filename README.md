@@ -13,13 +13,13 @@ Color vision deficiency checker: https://www.toptal.com/designers/colorfilter/
 Make sure to build hardware tables using the following command.
 
 ```shell
-python build_resource_tables.py --fabric hpc source/resources/data
+python ci_pipeline/build_resource_tables.py --fabric hpc source/resources/data
 ```
 
 Check URLs using the following. If the URLs are clean, there will be empty output.
 
 ```shell
-python check_url.py
+python ci_pipeline/check_url.py
 ```
 
 ### Images
