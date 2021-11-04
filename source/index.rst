@@ -74,20 +74,28 @@ Using Cheaha
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: UAB Cloud
+   :caption: cloud.rc
 
    openstack/network_setup_basic
+   openstack/instance_setup_basic
    openstack/volume_setup_basic
 
-.. Resources
+.. Data Management
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Resources
+   :caption: Data Management
 
-   resources/globus.rst
-   python.rst
+   data_management/globus.rst
+
+.. Software
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Software
+
 
 Indices and tables
 ==================
