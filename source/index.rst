@@ -20,10 +20,10 @@ Cheaha Quickstart
 Account Registration
 ^^^^^^^^^^^^^^^^^^^^
 
-:doc:`user_registration/uab_user`
+:doc:`cheaha/user_registration/uab_user`
    Self-register your account using UAB credentials.
 
-:doc:`user_registration/xias_guest`
+:doc:`cheaha/user_registration/xias_guest`
    Access Cheaha as an non-UAB researcher using XIAS. Only available after a UAB
    employee :ref:`grants access <user_registration/xias_users>`
 
@@ -31,31 +31,12 @@ Account Registration
 Using Cheaha
 ^^^^^^^^^^^^
 
-:doc:`open_ondemand/ood_main`
+:doc:`cheaha/open_ondemand/ood_main`
    How to use Cheaha through the online web portal
 
 
 
 .. Hidden ToC
-.. Account Registration
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-
-   /user_registration/index
-
-
-.. Using Cheaha
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Using Cheaha
-
-   /slurm/index
-   /open_ondemand/index
-   /lmod.rst
 
 .. Resources
 
@@ -64,9 +45,9 @@ Using Cheaha
    :hidden:
    :caption: Resources
 
-   /resources/support.rst
-   /resources/publications.rst
-   /resources/hardware.rst
+   resources/support.rst
+   resources/publications.rst
+   resources/hardware.rst
 
 
 .. UAB Cloud
@@ -87,7 +68,7 @@ Using Cheaha
    :hidden:
    :caption: Data Management
 
-   data_management/globus.rst
+   cheaha/data_management/globus.rst
 
 .. Software
 
