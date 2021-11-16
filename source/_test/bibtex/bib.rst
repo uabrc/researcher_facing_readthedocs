@@ -1,4 +1,5 @@
-.. bibliography::
-   :all:
-   :list: bullet
-   :style: plain
+..
+   .. bibliography::
+      :all:
+      :list: bullet
+      :style: plain
