@@ -245,7 +245,7 @@ usage rate high as long as a sufficient number of CPUs are requested.
    It is suggested that at least 2 CPUs are requested for every GPU to begin
    with. The user should monitor and adjust the number of cores on subsequent
    job submissions if necessary. Look at 
-   :doc:`how to manage jobs</slurm/job_management>` for more information. 
+   :doc:`how to manage jobs<job_management>` for more information. 
 
 In addition, you will need to load a CUDA toolkit for the script to access the
 GPUs. Depending on which version of tensorflow or pytorch you are using, a

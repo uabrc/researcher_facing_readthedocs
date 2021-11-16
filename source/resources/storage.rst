@@ -23,11 +23,11 @@ analysis pipelines.
 
 An often recommended backup policy is the 3-2-1 rule: maintain three copies of
 data, on two different media, with one copy off-site. `You can read more about
-the 3-2-1 rule here
-<https://www.backblaze.com/blog/the-3-2-1-backup-strategy/>__`. In the case of
-your application codes, using revision control tools during development provides
-an easy way to maintain a second copy, makes for a good software development
-process, and can help achieve reproducible research goals.
+the 3-2-1 rule
+here<https://www.backblaze.com/blog/the-3-2-1-backup-strategy/>__`. In the case
+of your application codes, using revision control tools during development
+provides an easy way to maintain a second copy, makes for a good software
+development process, and can help achieve reproducible research goals.
 
 Please review the data storage options provided by UAB IT for maintaining copies
 of your data. In choosing among these options, you should also be aware of UAB's

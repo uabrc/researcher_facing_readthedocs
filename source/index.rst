@@ -14,69 +14,16 @@ resources are freely available to use by any researcher or instructor at UAB.
 
 .. MKD: currently thinking we place and edit all TOC in index, but hide them from rendering on the actual page. They'll appear on the sidebar. Then we keep things on the mainpage to a minimum, like the CGDS docs, Only including quickstart information. Modelled after https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html
 
-Cheaha Quickstart
------------------
-
-Account Registration
-^^^^^^^^^^^^^^^^^^^^
-
-:doc:`cheaha/user_registration/uab_user`
-   Self-register your account using UAB credentials.
-
-:doc:`cheaha/user_registration/xias_guest`
-   Access Cheaha as an non-UAB researcher using XIAS. Only available after a UAB
-   employee :ref:`grants access <user_registration/xias_users>`
-
-
-Using Cheaha
-^^^^^^^^^^^^
-
-:doc:`cheaha/open_ondemand/ood_main`
-   How to use Cheaha through the online web portal
-
-
-
 .. Hidden ToC
 
-.. Resources
-
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Resources
+   :caption: Guides
 
-   resources/support.rst
-   resources/publications.rst
-   resources/hardware.rst
-
-
-.. UAB Cloud
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: cloud.rc
-
-   openstack/network_setup_basic
-   openstack/instance_setup_basic
-   openstack/volume_setup_basic
-
-.. Data Management
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Data Management
-
-   cheaha/data_management/globus.rst
-
-.. Software
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Software
-
+   cheaha/index.rst
+   uab_cloud/index.rst
+   quickstart/index.rst
 
 Indices and tables
 ==================
