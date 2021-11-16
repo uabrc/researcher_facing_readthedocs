@@ -7,7 +7,7 @@ version: 2
 
 # Set the version of Python and other tools you might need
 conda:
-  environment: env.yml
+  environment: build_env.yml
 
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
