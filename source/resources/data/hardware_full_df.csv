@@ -1,7 +1,4 @@
 Generation,Compute Type,Partition,Total Cores,Total Memory GB,Total GPUs,Cores Per Node,Cores Per Die,Dies Per Node,Die Make,Die Model,Die Frequency GHz,Memory Per Node GB,GPU Per Node,GPU Make,GPU Model,GPU Memory GB,Nodes
-6,cpu,cpu,336,5376,,24,12,2,Intel,Xeon E5-2680 v3,2.5,384,,,,,14
-6,cpu,cpu,912,9728,,24,12,2,Intel,Xeon E5-2680 v3,2.5,256,,,,,38
-6,cpu,cpu,1056,5632,,24,12,2,Intel,Xeon E5-2680 v3,2.5,128,,,,,44
 7,gpu,pascalnodes,504,4608,72,28,14,2,Intel,Xeon E5-2680 v4,2.4,256,4,NVIDIA,Tesla P100,16,18
 8,cpu,cpu,504,4032,,24,12,2,Intel,Xeon E5-2680 v4,2.5,192,,,,,21
 8,high memory,largemem,240,7680,,24,12,2,Intel,Xeon E5-2680 v4,2.5,768,,,,,10
