@@ -16,7 +16,7 @@ traditional command-line interactive environment, via SSH. These interfaces
 provide access to many scientific tools that can leverage a dedicated pool of
 local compute resources via the SLURM batch scheduler. Cheaha and associated
 storage has been assessed by external auditors, and passed a security assessment
-for HIPAA alignment. See below for the current hardware information.
+for HIPAA alignment.
 
 .. MKD: Add link to the current compute capabilities in the previous sentence
 
@@ -27,7 +27,7 @@ In addition UAB researchers also have access to regional and national HPC resour
    
    .. MKD: Add an Introduction to Cheaha section (History, Citing, System
    .. Overview etc.)
-
+   
    /user_registration/index
 
    .. MKD: Add file transfer here. FileZilla and Globus instructions
@@ -37,7 +37,8 @@ In addition UAB researchers also have access to regional and national HPC resour
    /cheaha/open_ondemand/index
 
    .. MKD: Add basic terminal and linux navigation here
-
+   
+   /cheaha/hardware
    /cheaha/slurm/index
    /cheaha/lmod
 
