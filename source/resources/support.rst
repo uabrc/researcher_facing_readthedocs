@@ -52,3 +52,12 @@ Storage
 
 1. What is the name of the project?
 2. How much additional or total space will be needed?
+
+
+Office Hours
+============
+
+Office hours are held virtually via Zoom. Please see below for our current weekly times.
+
+Mondays 10:00 AM to 12:00 PM: `Zoom <https://uab.zoom.us/j/84019898491?pwd=bWlYaldMWUoyY0lCcGhuT3dmZjZLQT09>`__
+Thursdays 10:00 AM to 12:00 PM: `Zoom <https://uab.zoom.us/j/96229651103?pwd=RmpsWG1NYkxjclgxTThXb1h2bVBndz09>`__
