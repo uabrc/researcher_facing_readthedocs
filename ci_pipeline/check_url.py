@@ -46,7 +46,7 @@ CHECKS = [
     },
     {
         "action": None,
-        "pattern": re.compile(r"`(?:[^<> ]*? )*?<(.*?)>`_"),
+        "pattern": re.compile(r"`(?:[^<> ]*? )*?<(.*?)>`_(?!_)"),
         "text": "Use double trailing underscore instead of single to make explicit target into anonymous target",
     },
     {
