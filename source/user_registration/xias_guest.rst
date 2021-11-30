@@ -1,7 +1,7 @@
 Guest Instructions
 ==================
 
-These instructions are for guests who have been registered by UAB faculty and staff to use internal UAB resources. Once a request for a XIAS account has been made by your UAB sponsor, you will need to follow these instructions to complete the XIAS registration and obtain access to UAB resources. All of the links used on this page are available at the `UAB XIAS Guest Users <https://apps.idm.uab.edu/xias/top>`_ page.
+These instructions are for guests who have been registered by UAB faculty and staff to use internal UAB resources. Once a request for a XIAS account has been made by your UAB sponsor, you will need to follow these instructions to complete the XIAS registration and obtain access to UAB resources. All of the links used on this page are available at the `UAB XIAS Guest Users <https://apps.idm.uab.edu/xias/top>`__ page.
 
 Create Account
 --------------
@@ -16,7 +16,7 @@ Create Account
    .. figure:: ./images/xias_guest_002.png
       :alt: Image showing email with instructions for completing XIAS user registration. The instructions include a link to the UAB XIAS Guest Users page https://apps.idm.uab.edu/xias/top and an invite code for registration.
 
-3. Navigate to the link in the email. Please practice good internet hygiene and copy the link text, instead of clicking the link! As of the time of writing the link will be to the `UAB XIAS Guest Users <https://apps.idm.uab.edu/xias/top>`_ page. Once at the main page, click the "Enter Invite or Reset Code" link.
+3. Navigate to the link in the email. Please practice good internet hygiene and copy the link text, instead of clicking the link! As of the time of writing the link will be to the `UAB XIAS Guest Users <https://apps.idm.uab.edu/xias/top>`__ page. Once at the main page, click the "Enter Invite or Reset Code" link.
 
    .. figure:: ./images/xias_guest_003.png
       :alt: Image showing the main UAB XIAS Guest Users page. Links are in the menu at left and include the "Enter Invite or Reset Code" link.
