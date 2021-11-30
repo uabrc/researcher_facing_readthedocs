@@ -11,7 +11,7 @@ SOURCE = PurePath(".") / "source"
 # CUSTOM ACTIONS
 def get_status(url: str, text: str) -> Optional[str]:
     try:
-        response = requests.get(url=url)
+        response = requests.get(url=url, timeout=0.250)
         status = response.status_code
         if status == 200:
             out = None
