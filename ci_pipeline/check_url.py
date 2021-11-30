@@ -17,7 +17,7 @@ def get_status(url: str, text: str) -> Optional[str]:
             out = None
         else:
             out = text.format(url=url, status=str(status))
-    except requests.exceptions.MissingSchema as e:
+    except Exception as e:
         out = str(e)
     return out
 
