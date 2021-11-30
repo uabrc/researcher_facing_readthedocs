@@ -20,7 +20,9 @@ for HIPAA alignment.
 
 .. MKD: Add link to the current compute capabilities in the previous sentence
 
-In addition UAB researchers also have access to regional and national HPC resources such as Alabama Supercomputer Authority (ASA), XSEDE and Open Science Grid (OSG). 
+In addition UAB researchers also have access to regional and national HPC
+resources such as Alabama Supercomputer Authority (ASA), XSEDE and Open Science
+Grid (OSG). 
 
 .. toctree::
     :maxdepth: 2
@@ -28,12 +30,6 @@ In addition UAB researchers also have access to regional and national HPC resour
    .. MKD: Add an Introduction to Cheaha section (History, Citing, System
    .. Overview etc.)
    
-   /user_registration/index
-
-   .. MKD: Add file transfer here. FileZilla and Globus instructions
-
-   .. MKD: Add storage page here
-
    /cheaha/open_ondemand/index
 
    .. MKD: Add basic terminal and linux navigation here
@@ -41,5 +37,4 @@ In addition UAB researchers also have access to regional and national HPC resour
    /cheaha/hardware
    /cheaha/slurm/index
    /cheaha/lmod
-
-   .. MKD: Add Python environments page here
+   /cheaha/conda

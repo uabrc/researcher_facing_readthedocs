@@ -19,11 +19,11 @@ resources are freely available to use by any researcher or instructor at UAB.
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Guides
 
+   account_management/index.rst
+   storage/index.rst
    cheaha/index.rst
    uab_cloud/index.rst
-   quickstart/index.rst
 
 Indices and tables
 ==================

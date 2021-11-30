@@ -4,12 +4,20 @@ Storage
 Privacy
 -------
 
-**Do not store sensitive information on this filesystem. It is not encrypted.** Note that your data will be stored on the cluster filesystem, and while not accessible to ordinary users, it could be accessible to the cluster administrator(s). 
+**Do not store sensitive information on this filesystem. It is not encrypted.**
+Note that your data will be stored on the cluster filesystem, and while not
+accessible to ordinary users, it could be accessible to the cluster
+administrator(s). 
 
 No Automatic Backups
 --------------------
 
-There is no automatic back up of any user data on the cluster in home, data, or scratch. At this time, all user data back up processes are defined and managed by each user and/or lab. Given that data backup demands vary widely between different users, groups, and research domains, this approach enables those who are most familiar with the data to make appropriate decisions based on their specific needs.
+There is no automatic back up of any user data on the cluster in home, data, or
+scratch. At this time, all user data back up processes are defined and managed
+by each user and/or lab. Given that data backup demands vary widely between
+different users, groups, and research domains, this approach enables those who
+are most familiar with the data to make appropriate decisions based on their
+specific needs.
 
 For example, if a group is working with a large shared data set that is a local
 copy of a data set maintained authoritatively at a national data bank,
@@ -24,7 +32,7 @@ analysis pipelines.
 An often recommended backup policy is the 3-2-1 rule: maintain three copies of
 data, on two different media, with one copy off-site. `You can read more about
 the 3-2-1 rule
-here<https://www.backblaze.com/blog/the-3-2-1-backup-strategy/>__`. In the case
+here <https://www.backblaze.com/blog/the-3-2-1-backup-strategy/>`__. In the case
 of your application codes, using revision control tools during development
 provides an easy way to maintain a second copy, makes for a good software
 development process, and can help achieve reproducible research goals.
@@ -84,9 +92,11 @@ Project Directory
 ^^^^^^^^^^^^^^^^^
 
 Shared data can be stored in a ``/data/project/<project_name>`` directory. The
-default storage size for a new project is 50TB. As with user scratch, this area **is not backed up**!
+default storage size for a new project is 50TB. As with user scratch, this area
+**is not backed up**!
 
-This is helpful if a team of researchers must access the same data. A PI can open a help desk ticket to request a project directory under ``/data/project``.
+This is helpful if a team of researchers must access the same data. A PI can
+open a help desk ticket to request a project directory under ``/data/project``.
 
 In order to add or remove a user's access to a project directory, the PI who
 requested the project space must create a support ticket.
@@ -104,7 +114,8 @@ All users have access to a large, temporary, work-in-progress directory for
 storing data, called a scratch directory in ``/data/scratch/$USER`` or
 ``$USER_SCRATCH``.
 
-Use this directory to store very large datasets for a short period of time and to run your jobs.
+Use this directory to store very large datasets for a short period of time and
+to run your jobs.
 
 **Important Information:**
 - Scratch space (network and local) **is not backed up**.
@@ -144,8 +155,8 @@ exiting.
 
 Note that ``$LOCAL_SCRATCH`` is only useful for jobs in which all processes run
 on the same compute node, so MPI jobs are not candidates for this solution. Use
-the ``#SBATCH --nodes=1`` slurm directive to specify that all requested cores are on
-the same node.
+the ``#SBATCH --nodes=1`` slurm directive to specify that all requested cores
+are on the same node.
 
 The following is an array job example that uses ``$LOCAL_SCRATCH`` by
 transferring the inputs into ``$LOCAL_SCRATCH`` at the beginning of the script
