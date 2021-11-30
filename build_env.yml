@@ -1,0 +1,8 @@
+name: rst
+channels:
+  - anaconda
+dependencies:
+  - python=3.9.6
+  - pip=21.2.4
+  - pip:
+      - sphinx-rtd-theme==1.0.0
