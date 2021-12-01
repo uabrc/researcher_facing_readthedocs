@@ -21,7 +21,7 @@ resources are freely available to use by any researcher or instructor at UAB.
    :hidden:
 
    account_management/index.rst
-   storage/index.rst
+   data_management/index.rst
    cheaha/index.rst
    uab_cloud/index.rst
 
