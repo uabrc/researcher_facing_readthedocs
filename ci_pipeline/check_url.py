@@ -11,13 +11,13 @@ SOURCE = PurePath(".") / "source"
 # CUSTOM ACTIONS
 def get_status(url: str, text: str) -> Optional[str]:
     try:
-        response = requests.get(url=url)
+        response = requests.get(url=url, timeout=0.250)
         status = response.status_code
         if status == 200:
             out = None
         else:
             out = text.format(url=url, status=str(status))
-    except requests.exceptions.MissingSchema as e:
+    except Exception as e:
         out = str(e)
     return out
 
@@ -46,7 +46,7 @@ CHECKS = [
     },
     {
         "action": None,
-        "pattern": re.compile(r"`(?:[^<> ]*? )*?<(.*?)>`_"),
+        "pattern": re.compile(r"`(?:[^<> ]*? )*?<(.*?)>`_(?!_)"),
         "text": "Use double trailing underscore instead of single to make explicit target into anonymous target",
     },
     {
