@@ -102,7 +102,7 @@ Common Errors
 More Information
 ~~~~~~~~~~~~~~~~
 
-A `Globus FAQ <https://docs.globus.org/faq/globus-connect-endpoin/>`__ is available for additional information on endpoints and transfers.
+A `Globus FAQ <https://docs.globus.org/faq/globus-connect-endpoints/>`__ is available for additional information on endpoints and transfers.
 
 
 Using Bookmarks

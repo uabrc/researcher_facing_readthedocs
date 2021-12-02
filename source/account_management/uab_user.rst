@@ -4,7 +4,7 @@ UAB User Instructions
 These instructions are for users at UAB to request their own accounts on Cheaha
 using the Open OnDemand web portal.
 
-Navigate to `<rc.uab.edu>`__, authenticate with your UAB credentials, and if you
+Navigate to `<https://rc.uab.edu>`__, authenticate with your UAB credentials, and if you
 do not have a Cheaha account, you will see the screen shown below:
 
 .. image:: images/uab_self_register.png

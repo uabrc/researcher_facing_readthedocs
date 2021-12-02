@@ -1,14 +1,14 @@
 Managing UAB XIAS Users
 =======================
 
-UAB XIAS User management allow UAB faculty and staff to grant external collaborators access to specific resources on the internal UAB network. All XIAS users must be connected with at least one site, so you'll need to create one at the `UAB XIAS User Management Webpage <https://idm.uab.edu/cgi-cas/xrmi/sites>`_. All XIAS Users must also have an expiration date.
+UAB XIAS User management allow UAB faculty and staff to grant external collaborators access to specific resources on the internal UAB network. All XIAS users must be connected with at least one site, so you'll need to create one at the `UAB XIAS User Management Webpage <https://idm.uab.edu/cgi-cas/xrmi/sites>`__. All XIAS Users must also have an expiration date.
 
 Adding Users
 ------------
 
 Before adding users, have a list of user emails handy for the site you wish to add users to, as well as expiration dates for each user.
 
-1. To start go to the `UAB XIAS User Management Webpage <https://idm.uab.edu/cgi-cas/xrmi/sites>`_.
+1. To start go to the `UAB XIAS User Management Webpage <https://idm.uab.edu/cgi-cas/xrmi/sites>`__.
 
    .. figure:: ./images/xias_users_add_000.png
       :alt: Image showing UAB XIAS User Management Webpage with Select Project/Site drop down box, Register button, List button, and search bar to locate specific user by email.
@@ -42,7 +42,7 @@ Before adding users, have a list of user emails handy for the site you wish to a
    .. figure:: ./images/xias_users_add_005.png
       :alt: Image showing UAB XIAS User Management Webpage with the text Registration successful.
 
-7. To complete their registration, please direct your external collaborators to the `UAB XIAS Guest Users page <https://idm.uab.edu/xias/top>`_. When they have completed their registration, you should receive an email like the following.
+7. To complete their registration, please direct your external collaborators to the `UAB XIAS Guest Users page <https://idm.uab.edu/xias/top>`__. When they have completed their registration, you should receive an email like the following.
 
    .. figure:: ./images/xias_users_add_006.png
       :alt: Image showing email sample received following XIAS user registration. Includes user name and email as well as sites and URI resources.
