@@ -27,5 +27,18 @@
   .wy-menu-vertical a:hover {
     background-color: #1e6b52; /* UAB Green */
   }
+  .wy-menu-vertical li button.toctree-expand {
+    color: #c0c0c0; /* ReadTheDocs Off White, Softened to Gray */
+    /* padding-right: 12px; /* Breaks layout of menu links, can't remove indent */
+  }
+  .wy-menu-vertical a:hover button.toctree-expand {
+    color: #fcfcfc; /* ReadTheDocs Off White */
+  }
+  .wy-menu-vertical li.current > a button.toctree-expand {
+    color: #404040; /* ReadTheDocs Off Black */
+  }
+  .wy-menu-vertical li.current > a:hover button.toctree-expand {
+    color: #404040; /* ReadTheDocs Off Black */
+  }
 </style>
 {% endblock %}
