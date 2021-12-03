@@ -21,7 +21,7 @@ A description of the different hardware generations are summarized in the follow
 - Gen7: 18 2x14 core (504 cores total) 2.4GHz Intel Xeon E5-2680 v4 compute nodes with 256GB RAM, four NVIDIA Tesla P100 16GB GPUs, and EDR InfiniBand interconnect (supported by UAB, 2017). 
 
 .. csv-table::
-   :file: /resources/data/hardware_short_df.csv
+   :file: data/hardware_short_df.csv
    :header-rows: 1
 
 TFLOPS
@@ -30,5 +30,5 @@ TFLOPS
 The table below is a theoretical analysis based on processor instructions and core counts, and is not a reflection of efficiency in practice.
 
 .. csv-table::
-   :file: /resources/data/tflops_df.csv
+   :file: data/tflops_df.csv
    :header-rows: 1
