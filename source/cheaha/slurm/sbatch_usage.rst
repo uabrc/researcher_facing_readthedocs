@@ -55,8 +55,8 @@ Slurm Partitions
 ----------------
 
 .. csv-table:: Available Slurm Partitions
-   :file: /cheaha/slurm/partition.csv
-   :widths: 25 25 25 25
+   :file: partition.csv
+   :widths: 20 20 20 20 20
    :header-rows: 1
 
 Notes:
