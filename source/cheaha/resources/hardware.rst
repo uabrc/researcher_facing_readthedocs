@@ -24,6 +24,11 @@ A description of the different hardware generations are summarized in the follow
    :file: data/hardware_short_df.csv
    :header-rows: 1
 
+.. note::
+
+   Gen 8 and 9 CPUs are associated with the interactive, express, short, medium,
+   and long partitions. All of those nodes are shared among these 5 partitions.
+
 TFLOPS
 ~~~~~~
 
