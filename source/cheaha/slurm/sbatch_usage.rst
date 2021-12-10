@@ -177,7 +177,7 @@ In order to request GPU resources, you will need to include the ``--gres=gpu:#``
 
 .. note::
 
-   It is suggested that at least 2 CPUs are requested for every GPU to begin with. The user should monitor and adjust the number of cores on subsequent job submissions if necessary. Look at :doc:`how to manage jobs<job_management>` for more information.
+   It is suggested that at least 2 CPUs are requested for every GPU to begin with. The user should monitor and adjust the number of cores on subsequent job submissions if necessary. Look at :doc:`how to manage jobs<../../slurm/job_management>` for more information.
 
 In addition, you will need to load a CUDA toolkit for the script to access the GPUs. Depending on which version of tensorflow or pytorch you are using, a different version of the CUDA toolkit may be required. For instance, tensorflow version 2.5.0 requires CUDA toolkit version 11.2 or higher.
 
