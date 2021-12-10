@@ -11,10 +11,10 @@ Common Slurm Terminology
 ------------------------
 
 - Node: A subdivision of the cluster that contains multiple cores.
-  
+
   - Login nodes: Controls user access to Cheaha. Low count and shared among all
     users. DO NOT RUN JOBS ON THE LOGIN NODE
-  
+
   - Compute nodes: Dedicated nodes for running user jobs.
 
 - Core: A single CPU
@@ -55,7 +55,7 @@ Slurm Partitions
 ----------------
 
 .. csv-table:: Available Slurm Partitions
-   :file: /slurm/partitions.csv
+   :file: /cheaha/slurm/partition.csv
    :widths: 25 25 25 25
    :header-rows: 1
 
@@ -86,21 +86,21 @@ cause it to error.
 
 Questions to ask yourself when requesting job resources:
 
-1. Can my scripts take advantage of multiple CPUs? 
-  
+1. Can my scripts take advantage of multiple CPUs?
+
    a. For instance, RStudio only works on a single thread (outside of very
       specific cases). Requesting more than 1 CPU here would not improve performance.
 
 2. How large is the data I'm working with?
-3. Do my pipelines keep large amounts of data in memory? 
-4. How long should my job take? 
-   
+3. Do my pipelines keep large amounts of data in memory?
+4. How long should my job take?
+
    a. For example, do not request 50 hours time for a 15 hour process. Have a
       reasonable buffer included to account for unexpected processing delays,
       but do not request the maximum time on a partition if that's unnecessary.
 
-.. note:: 
-   
+.. note::
+
    Reasonable overestimation of resources is better than underestimation.
    However, gross overestimation may cause admins to contact you about adjusting
    resources for future jobs.
@@ -195,11 +195,12 @@ variety of inputs:
    # submit jobs 0, 3, and 7
    sbatch --array=0,3,7 array.sh
 
-   # submit jobs 1,3,5, and 7
-   sbatch --array=1-7:2 array.sh
+   # submit jobs with index 0, 2, 4, and 6
+   sbatch --array=0-6:2 array.sh
 
 Additionally, the ``--array`` directive can be included with the rest of the
-SBATCH options in the script itself.
+SBATCH options in the script itself, although this adds another step if
+different subsets of the array job need to be run over time.
 
 
 Interactive Jobs
@@ -207,7 +208,7 @@ Interactive Jobs
 
 Batch jobs are meant to be submitted and not interacted with during execution.
 However, some jobs need user input during execution or need to use a GUI.
-Interactive jobs are meant to be used for these situations. 
+Interactive jobs are meant to be used for these situations.
 
 It is highly suggested to use the Cheaha :ref:`Open OnDemand` web portal for
 interactive jobs. Interactive sessions for certain software such as MATLAB and
@@ -222,11 +223,11 @@ opening the VNC. You can do this using the following command:
 
    srun --ntasks=1 --cpus-per-task=1 --mem-per-cpu=4G --time=1:00:00
    --partition=express --pty /bin/bash
-   
+
 Resources should be changed to fit the job's needs. An interactive job will then
 start on a compute node. You can tell if you are on a compute node by looking at
 the command line. It should have the form: ``[blazerid@c0XXX ~]`` where XXX is a
-number. 
+number.
 
 .. warning::
 
@@ -250,16 +251,16 @@ usage rate high as long as a sufficient number of CPUs are requested.
 
 
 .. note::
-   
+
    It is suggested that at least 2 CPUs are requested for every GPU to begin
    with. The user should monitor and adjust the number of cores on subsequent
-   job submissions if necessary. Look at 
-   :doc:`how to manage jobs</slurm/job_management>` for more information. 
+   job submissions if necessary. Look at
+   :doc:`how to manage jobs<job_management>` for more information.
 
 In addition, you will need to load a CUDA toolkit for the script to access the
 GPUs. Depending on which version of tensorflow or pytorch you are using, a
 different version of the CUDA toolkit may be required. For instance, tensorflow
-version 2.5.0 requires CUDA toolkit version 11.2 or higher. 
+version 2.5.0 requires CUDA toolkit version 11.2 or higher.
 
 Several CUDA toolkit versions have been installed as modules on Cheaha. To see
 which CUDA toolkits are available, use:
@@ -267,4 +268,3 @@ which CUDA toolkits are available, use:
 .. code-block:: bash
 
    module -r spider 'cuda.*toolkit'
-
