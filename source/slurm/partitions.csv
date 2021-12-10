@@ -1,8 +1,0 @@
-Partition,Max Runtime,Max Compute Nodes,Priority
-express,2 hours,No limit,2
-short,12 hours,44,4
-medium,2 days 2 hours,44,6
-largemem,2 days 2 hours,10,6
-long,6 days 6 hours,5,8
-pascalnodes,12 hours,No limit,8
-interactive,2 hours,1,10
