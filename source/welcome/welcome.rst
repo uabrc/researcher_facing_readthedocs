@@ -30,15 +30,20 @@ The UAB IT Research Computing Group has collaborated with a number of prominent 
 
 As part of the process of building this research computing platform, the UAB IT Research Computing Group has hosted an annual campus symposium on research computing and cyber-infrastructure (CI) developments and accomplishments. Starting as CyberInfrastructure (CI) Days in 2007, the name was changed to :ref:`UAB Research Computing Day` in 2011 to reflect the broader mission to support research. IT Research Computing also participates in other campus wide symposiums including UAB Research Core Day. 
 
-Featured Research Applications
-------------------------------
+.. 
+    Featured Research Applications
+    ------------------------------
 
-The UAB IT Research Computing group, the CCTS BMI, and `Heflin Center for Genomic Science`_ have teamed up to help improve genomic research at UAB. Researchers can work with the scientists and research experts to produce a research pipeline from sequencing, to analysis, to publication. 
+    The UAB IT Research Computing group, the CCTS BMI, and `Heflin Center for Genomic Science`_ have teamed up to help improve genomic research at UAB. Researchers can work with the scientists and research experts to produce a research pipeline from sequencing, to analysis, to publication. 
 
-.. _Heflin Center for Genomic Science: www.uab.edu/hcgs/bioinformatics
+    .. _Heflin Center for Genomic Science: www.uab.edu/hcgs/bioinformatics
 
-Galaxy
-^^^^^^
+    Galaxy
+    ^^^^^^
 
-A web front end to run analyses on the cluster fabric. Currently focused on NGS (Next Generation Sequencing; biology) analysis support.
+    A web front end to run analyses on the cluster fabric. Currently focused on NGS (Next Generation Sequencing; biology) analysis support.
 
+Data Backups
+------------
+
+Users of Cheaha are solely responsible for backing up their files. This includes files under **/data/user**, **/data/project**, and **/home**. There is no automatic back up of any user data on the cluster in home, data, or scratch. For more information, please see :ref:`backups`.
