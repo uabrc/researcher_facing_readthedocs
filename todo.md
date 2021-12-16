@@ -47,7 +47,6 @@
 - SLURM queues and how queues work (meaning their limits per user, a practical
   explanation of how priority handled, etc)
 - Job arrays? (done)
-- MPI and using cores across nodes
 
 
 # Low
