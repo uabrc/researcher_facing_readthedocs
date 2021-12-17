@@ -25,16 +25,17 @@ resources such as Alabama Supercomputer Authority (ASA), XSEDE and Open Science
 Grid (OSG). 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
    
-   .. MKD: Add an Introduction to Cheaha section (History, Citing, System
-   .. Overview etc.)
+    .. MKD: Add an Introduction to Cheaha section (History, Citing, System
+    .. Overview etc.)
    
-   /cheaha/open_ondemand/index
+    /cheaha/resources/hardware
+    /cheaha/resources/partition
+    /cheaha/open_ondemand/index
 
-   .. MKD: Add basic terminal and linux navigation here
-   
-   /cheaha/hardware
-   /cheaha/slurm/index
-   /cheaha/lmod
-   /cheaha/conda
+    .. MKD: Add basic terminal and linux navigation here
+    
+    /cheaha/slurm/index
+    /cheaha/lmod
+    /cheaha/conda
