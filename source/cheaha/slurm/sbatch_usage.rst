@@ -55,6 +55,7 @@ Slurm Partitions
 ----------------
 
 .. csv-table:: Available Slurm Partitions
+
    :file: partition.csv
    :widths: 20 20 20 20 20
    :header-rows: 1
@@ -145,10 +146,12 @@ Array Jobs
 
 For some analyses, you will want to perform the same operations on different
 inputs. However, instead of creating individual scripts for each different
-input, you can create an array job instead.
+input, you can create an array job instead. These array jobs duplicate the
+SBATCH parameters as well as the commands of the script and apply them to
+different inputs specified by the user.
 
-Array jobs can use a Slurm environmental variable, ``$SLURM_ARRAY_TASK_ID``, as an
-index for inputs. For example, if we have a script that looks like:
+Array jobs can use a Slurm environmental variable, ``$SLURM_ARRAY_TASK_ID``, as
+an index for inputs. For example, if we have a script that looks like:
 
 .. code-block:: bash
 
@@ -170,9 +173,16 @@ array.sh) using the following command:
 
 .. code-block:: bash
 
-   sbatch --array=1-16 array.sh
 
-This will cause 16 jobs to be created with array IDs from 1 to 16. Each job will
+   sbatch --array=0-15 array.sh
+
+.. note::
+
+   IT is crucial to note that arrays use 0-based indexing. Array number 0
+   corresponds to the first job you're running. The ``SLURM_ARRAY_TASK_ID``
+   variable will also be 0 in this case.
+
+This will cause 16 jobs to be created with array IDs from 0 to 15. Each job will
 write out the line "My SLURM_ARRAY_TASK_ID: " followed by the ID number. Scripts
 can be written to take advantage of this indexing environmental variable. For
 example, a project could have a list of participants that should be processed in
@@ -185,14 +195,16 @@ variety of inputs:
 
 .. code-block:: bash
 
-   # submit jobs 1,4, and 8
-   sbatch --array=1,4,8 array.sh
+   # submit jobs with index 0, 3, and 7
+   sbatch --array=0,3,7 array.sh
 
-   # submit jobs 1,3,5, and 7
-   sbatch --array=1-7:2 array.sh
+   # submit jobs with index 0, 2, 4, and 6
+   sbatch --array=0-6:2 array.sh
 
 Additionally, the ``--array`` directive can be included with the rest of the
-SBATCH options in the script itself.
+SBATCH options in the script itself, although this adds another step if
+different subsets of the array job need to be run over time.
+
 
 
 Interactive Jobs
@@ -213,9 +225,9 @@ opening the VNC. You can do this using the following command:
 
 .. code-block:: bash
 
-   sinteractive --ntasks=1 --cpus-per-task=1 --mem-per-cpu=4G --time=1:00:00
-   --partition=express
-   
+   srun --ntasks=1 --cpus-per-task=1 --mem-per-cpu=4G --time=1:00:00
+   --partition=express --pty /bin/bash
+
 Resources should be changed to fit the job's needs. An interactive job will then
 start on a compute node. You can tell if you are on a compute node by looking at
 the command line. It should have the form: ``[blazerid@c0XXX ~]`` where XXX is a
@@ -225,7 +237,8 @@ number.
 
    If your terminal says ``[blazerid@loginXXX ~]``, you are on the login node.
    NO COMPUTE JOBS SHOULD BE RUN ON THE LOGIN NODE. If jobs are being run on the
-   login node, they will be deleted and the user will be warned.
+   login node, they will be deleted and the user will be warned. Multiple
+   warnings will result in account suspension.
 
 
 Requesting GPUs
