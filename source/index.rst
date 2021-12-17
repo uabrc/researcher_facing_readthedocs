@@ -1,8 +1,8 @@
 .. Main UAB RC documentation for anything relating to Cheaha and the new UAB
    Cloud system.
 
-Welcome to UAB Research Computing Docs!
-=======================================
+UAB Research Computing Documentation
+====================================
 
 .. add short blurb about research computing here
 
@@ -20,6 +20,7 @@ resources are freely available to use by any researcher or instructor at UAB.
    :maxdepth: 2
    :hidden:
 
+   welcome/welcome.rst
    account_management/index.rst
    data_management/index.rst
    cheaha/index.rst
