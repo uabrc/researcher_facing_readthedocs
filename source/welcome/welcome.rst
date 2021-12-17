@@ -47,3 +47,15 @@ Data Backups
 ------------
 
 Users of Cheaha are solely responsible for backing up their files. This includes files under **/data/user**, **/data/project**, and **/home**. There is no automatic back up of any user data on the cluster in home, data, or scratch. For more information, please see :ref:`backups`.
+
+
+Personnel
+---------
+
+UAB IT Research Computing currently maintains a support staff of 13 FTE staff and 6 interns lead by Ralph Zottola,the Assistant Vice President for Research Computing, and managed by John-Paul Robinson, HPC Architect Manager, and Blake Joyce, Data Science Manager. Laura Dabbs is the program coordinator. 
+
+Research Computing is made up of three teams:
+
+- The Development Team with 4 FTE software developers
+- The Operations Team with 3 FTE system analysts
+- The Data Science Team with 3 FTE scientists and 6 intern positions. 
