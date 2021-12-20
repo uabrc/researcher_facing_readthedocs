@@ -71,8 +71,9 @@ Two types of scratch space are provided for analyses currently being ran, networ
 
     Scratch space (network and local) **is not backed up**.
 
+
 Network Scratch
-***************
+~~~~~~~~~~~~~~~
 
 All users have access to a large, temporary, work-in-progress directory for storing data, called a scratch directory in ``/data/scratch/$USER`` or ``$USER_SCRATCH``. Use this directory to store very large datasets for a short period of time and to run your jobs. The maximum amount of data a single user can store in network scratch is 100 TB at once.
 
@@ -84,7 +85,7 @@ Network scratch is available on the login node and each compute node. This stora
     Research Computing expects each user to keep their scratch areas clean. **The cluster scratch areas are not to be used for archiving data.** In order to keep scratch clear and usable for everyone, files older than 28 days will be automatically deleted.
 
 Local Scratch
-*************
+~~~~~~~~~~~~~
 
 Each compute node has a local scratch directory that is accessible via the variable ``$LOCAL_SCRATCH``. If your job performs a lot of file I/O, the job should use ``$LOCAL_SCRATCH`` rather than  ``$USER_SCRATCH`` to prevent bogging down the network scratch file system. It's important to recognize most jobs run on the cluster do not fall under this category. The amount of scratch space available is approximately 800GB.
 
