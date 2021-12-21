@@ -45,14 +45,13 @@ Additionally, when requesting a job using ``sbatch``, you will need to include a
 
 .. note::
    
-   It is suggested that at least 2 CPUs are requested for every GPU to begin
-   with. The user should monitor and adjust the number of cores on subsequent
-   job submissions if necessary. Look at 
-   :doc:`how to manage jobs<job_management>` for more information.
+   It is suggested that at least 2 CPUs are requested for every GPU to begin    with. The user should monitor and adjust the number of cores on subsequent job submissions if necessary. Look at :doc:`how to manage jobs<job_management>` for more information.
 
-.. note::
 
-   When requesting an interactive job through Open OnDemand, selecting the ``pascalnodes`` partitions will automatically request access to one GPU as well. There is currently no way to change the number of GPUs for OOD interactive jobs.
+Open OnDemand
+~~~~~~~~~~~~~
+
+When requesting an interactive job through :ref:`Open OnDemand`, selecting the ``pascalnodes`` partitions will automatically request access to one GPU as well. There is currently no way to change the number of GPUs for OOD interactive jobs.
 
 
 CUDA Toolkit
@@ -60,8 +59,7 @@ CUDA Toolkit
 
 You will need to load a CUDA toolkit  module for relevant commands to access the GPUs. Depending on which version of tensorflow, pytorch, or other similar software you are using, a different version of the CUDA toolkit may be required. For instance, tensorflow version 2.5.0 requires CUDA toolkit version 11.2.
 
-Several CUDA toolkit versions have been installed as modules on Cheaha. To see
-which CUDA toolkits are available, use:
+Several CUDA toolkit versions have been installed as modules on Cheaha. To see which CUDA toolkits are available, use:
 
 .. code-block:: bash
 
