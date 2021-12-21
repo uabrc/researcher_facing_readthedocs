@@ -237,36 +237,3 @@ number.
    login node, they will be deleted and the user will be warned. Multiple
    warnings will result in account suspension.
 
-
-Requesting GPUs
----------------
-
-For users creating machine learning models using GPUs, specific directives are
-necessary. First, your job will need to use the ``pascalnodes`` partition. No
-other partition has access to GPUs.
-
-In order to request GPU resources, you will need to include the ``--gres=gpu:#``
-where ``#`` is the number of requested GPUs. You will also need to select a
-number of CPUs, the same as previously. CPUs feed data to the GPUs, keeping GPU
-usage rate high as long as a sufficient number of CPUs are requested.
-
-
-.. note::
-   
-   It is suggested that at least 2 CPUs are requested for every GPU to begin
-   with. The user should monitor and adjust the number of cores on subsequent
-   job submissions if necessary. Look at 
-   :doc:`how to manage jobs<job_management>` for more information. 
-
-In addition, you will need to load a CUDA toolkit for the script to access the
-GPUs. Depending on which version of tensorflow or pytorch you are using, a
-different version of the CUDA toolkit may be required. For instance, tensorflow
-version 2.5.0 requires CUDA toolkit version 11.2 or higher. 
-
-Several CUDA toolkit versions have been installed as modules on Cheaha. To see
-which CUDA toolkits are available, use:
-
-.. code-block:: bash
-
-   module -r spider 'cuda.*toolkit'
-

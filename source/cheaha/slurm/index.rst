@@ -30,5 +30,6 @@ The basic workflow for non-interactive jobs follows:
   :maxdepth: 2
 
   sbatch_usage
+  gpu
   job_management
 
