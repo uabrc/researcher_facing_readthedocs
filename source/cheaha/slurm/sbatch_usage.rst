@@ -55,8 +55,9 @@ Slurm Partitions
 ----------------
 
 .. csv-table:: Available Slurm Partitions
-   :file: /cheaha/slurm/partition.csv
-   :widths: 25 25 25 25
+
+   :file: partition.csv
+   :widths: 20 20 20 20 20
    :header-rows: 1
 
 Notes:
@@ -176,7 +177,7 @@ array.sh) using the following command:
 
 .. note::
 
-   IT is crucial to note that arrays use 0-based indexing. Array number 0
+   It is crucial to note that arrays use 0-based indexing. Array number 0
    corresponds to the first job you're running. The ``SLURM_ARRAY_TASK_ID``
    variable will also be 0 in this case.
 
@@ -203,7 +204,6 @@ Additionally, the ``--array`` directive can be included with the rest of the
 SBATCH options in the script itself, although this adds another step if
 different subsets of the array job need to be run over time.
 
-
 Interactive Jobs
 ----------------
 
@@ -224,7 +224,8 @@ opening the VNC. You can do this using the following command:
 
    srun --ntasks=1 --cpus-per-task=1 --mem-per-cpu=4G --time=1:00:00
    --partition=express --pty /bin/bash
-   
+
+
 Resources should be changed to fit the job's needs. An interactive job will then
 start on a compute node. You can tell if you are on a compute node by looking at
 the command line. It should have the form: ``[blazerid@c0XXX ~]`` where XXX is a
