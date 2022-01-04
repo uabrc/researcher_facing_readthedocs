@@ -6,6 +6,8 @@ Privacy
 
 **Do not store sensitive information on this filesystem. It is not encrypted.** Note that your data will be stored on the cluster filesystem, and while not accessible to ordinary users, it could be accessible to the cluster administrator(s). 
 
+.. _backups:
+
 No Automatic Backups
 --------------------
 
