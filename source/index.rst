@@ -1,8 +1,12 @@
 .. Main UAB RC documentation for anything relating to Cheaha and the new UAB
    Cloud system.
-
+ 
 UAB Research Computing Documentation
 ====================================
+
+.. important:
+
+   The main documentation for UAB Research computing has been moved to `uabrc.github.io <uabrc.github.io>`__. Please visit there for up-to-date documentation
 
 .. add short blurb about research computing here
 
@@ -14,21 +18,3 @@ resources are freely available to use by any researcher or instructor at UAB.
 
 .. MKD: currently thinking we place and edit all TOC in index, but hide them from rendering on the actual page. They'll appear on the sidebar. Then we keep things on the mainpage to a minimum, like the CGDS docs, Only including quickstart information. Modelled after https://sphinx-rtd-theme.readthedocs.io/en/stable/index.html
 
-.. Hidden ToC
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-
-   welcome/welcome.rst
-   account_management/index.rst
-   data_management/index.rst
-   cheaha/index.rst
-   uab_cloud/index.rst
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
