@@ -4,7 +4,7 @@
 UAB Research Computing Documentation
 ====================================
 
-.. important:
+.. important::
 
    The main documentation for UAB Research computing has been moved to `uabrc.github.io <uabrc.github.io>`__. Please visit there for up-to-date documentation
 
